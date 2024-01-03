@@ -1,0 +1,586 @@
+/* jost-regular - latin */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../../assets/fonts/jost-v14-latin-regular.woff2") format("woff2"), url("../../assets/fonts/jost-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* jost-500 - latin */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../../assets/fonts/jost-v14-latin-500.woff2") format("woff2"), url("../../assets/fonts/jost-v14-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* jost-700 - latin */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../../assets/fonts/jost-v14-latin-700.woff2") format("woff2"), url("../../assets/fonts/jost-v14-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* jost-900 - latin */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 900;
+  src: local(""), url("../../assets/fonts/jost-v14-latin-900.woff2") format("woff2"), url("../../assets/fonts/jost-v14-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* jost-italic - latin */
+@font-face {
+  font-family: "Jost";
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("../../assets/fonts/jost-v14-latin-italic.woff2") format("woff2"), url("../../assets/fonts/jost-v14-latin-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* jost-300 - latin_cyrillic */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""), url("../../assets/fonts/jost-v14-latin_cyrillic-300.woff2") format("woff2"), url("../../assets/fonts/jost-v14-latin_cyrillic-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* jost-regular - latin_cyrillic */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../../assets/fonts/jost-v14-latin_cyrillic-regular.woff2") format("woff2"), url("../../assets/fonts/jost-v14-latin_cyrillic-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* jost-500 - latin_cyrillic */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../../assets/fonts/jost-v14-latin_cyrillic-500.woff2") format("woff2"), url("../../assets/fonts/jost-v14-latin_cyrillic-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* jost-600 - latin_cyrillic */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../../assets/fonts/jost-v14-latin_cyrillic-600.woff2") format("woff2"), url("../../assets/fonts/jost-v14-latin_cyrillic-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* jost-700 - latin_cyrillic */
+@font-face {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../../assets/fonts/jost-v14-latin_cyrillic-700.woff2") format("woff2"), url("../../assets/fonts/jost-v14-latin_cyrillic-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-slab-regular - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../../assets/fonts/roboto-slab-v24-latin_cyrillic-ext_cyrillic-regular.woff2") format("woff2"), url("../../assets/fonts/roboto-slab-v24-latin_cyrillic-ext_cyrillic-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-slab-500 - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../../assets/fonts/roboto-slab-v24-latin_cyrillic-ext_cyrillic-500.woff2") format("woff2"), url("../../assets/fonts/roboto-slab-v24-latin_cyrillic-ext_cyrillic-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-slab-600 - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../../assets/fonts/roboto-slab-v24-latin_cyrillic-ext_cyrillic-600.woff2") format("woff2"), url("../../assets/fonts/roboto-slab-v24-latin_cyrillic-ext_cyrillic-600.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-slab-700 - latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../../assets/fonts/roboto-slab-v24-latin_cyrillic-ext_cyrillic-700.woff2") format("woff2"), url("../../assets/fonts/roboto-slab-v24-latin_cyrillic-ext_cyrillic-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-serif-regular - latin_cyrillic-ext */
+@font-face {
+  font-family: "Roboto Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../../assets/fonts/roboto-serif-v8-latin_cyrillic-ext-regular.woff2") format("woff2"), url("../../assets/fonts/roboto-serif-v8-latin_cyrillic-ext-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-serif-italic - latin_cyrillic-ext */
+@font-face {
+  font-family: "Roboto Serif";
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("../../assets/fonts/roboto-serif-v8-latin_cyrillic-ext-italic.woff2") format("woff2"), url("../../assets/fonts/roboto-serif-v8-latin_cyrillic-ext-italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-serif-500italic - latin_cyrillic-ext */
+@font-face {
+  font-family: "Roboto Serif";
+  font-style: italic;
+  font-weight: 500;
+  src: local(""), url("../../assets/fonts/roboto-serif-v8-latin_cyrillic-ext-500italic.woff2") format("woff2"), url("../../assets/fonts/roboto-serif-v8-latin_cyrillic-ext-500italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* roboto-serif-700italic - latin_cyrillic-ext */
+@font-face {
+  font-family: "Roboto Serif";
+  font-style: italic;
+  font-weight: 700;
+  src: local(""), url("../../assets/fonts/roboto-serif-v8-latin_cyrillic-ext-700italic.woff2") format("woff2"), url("../../assets/fonts/roboto-serif-v8-latin_cyrillic-ext-700italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-naskh-arabic-regular - latin_arabic */
+@font-face {
+  font-family: "Noto Naskh Arabic";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../../assets/fonts/noto-naskh-arabic-v25-latin_arabic-regular.woff2") format("woff2"), url("../../assets/fonts/noto-naskh-arabic-v25-latin_arabic-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* noto-naskh-arabic-500 - latin_arabic */
+@font-face {
+  font-family: "Noto Naskh Arabic";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../../assets/fonts/noto-naskh-arabic-v25-latin_arabic-500.woff2") format("woff2"), url("../../assets/fonts/noto-naskh-arabic-v25-latin_arabic-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Jost", "Arial", sans-serif;
+  background: url(../img//home-bg.png) no-repeat top;
+  background-size: cover;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.5;
+  max-width: 1400px;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #72e37c), color-stop(0.72, #13db20), color-stop(0.86, #177722));
+}
+
+input {
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app__main {
+  display: flex;
+  margin-top: 100px;
+  background-attachment: fixed;
+}
+
+.app__body {
+  width: 80%;
+  margin-left: auto;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 270px auto;
+  height: auto;
+}
+
+.input {
+  background-color: rgba(217, 217, 217, 0.2);
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: -0.04em;
+  color: rgb(2, 2, 2);
+  width: 35%;
+  border-radius: 5px;
+  padding: 10px;
+}
+.input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+}
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+}
+.input:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    max-width: 500px;
+  }
+  .input {
+    width: 30%;
+    color: #FFFFFF;
+  }
+  .input::-moz-placeholder {
+    color: #fefefe;
+  }
+  .input::placeholder {
+    color: #fefefe;
+  }
+  .container {
+    width: 95%;
+    display: block;
+  }
+  .background {
+    display: none;
+  }
+  .main {
+    position: static;
+    height: auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-height: 500px) {
+  .list-container {
+    display: none;
+  }
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.fajr-item {
+  background: linear-gradient(180deg, #110E2D 0%, #28214D 49.48%, #2E2755 100%);
+}
+.fajr-item::after {
+  background: url(../img/bacgr-fajr.png) no-repeat center bottom;
+  background-size: contain;
+}
+.fajr-item::before {
+  background: url(../img/fajr-after.png) no-repeat center center;
+  background-size: contain;
+  left: 60px;
+  top: 100px;
+}
+
+.sunrise-item {
+  background: linear-gradient(180deg, #5995de 0%, #aac1fc 61.37%, #4D6BB8 100%);
+}
+.sunrise-item::after {
+  background: url(../img/dhuhr-bg.png) no-repeat center bottom;
+  background-size: contain;
+}
+.sunrise-item::before {
+  background: url(../img/sun.png) no-repeat center center;
+  background-size: contain;
+  left: 10px;
+  top: 150px;
+}
+
+.dhuhr-item {
+  background: linear-gradient(180deg, #88BFFF 0%, #BFD1FF 44.79%, #4D6BB8 100%);
+}
+.dhuhr-item::after {
+  background: url(../img/dhuhr-bg.png) no-repeat center bottom;
+  background-size: contain;
+}
+.dhuhr-item::before {
+  background: url(../img/sun.png) no-repeat center center;
+  background-size: contain;
+  left: 20px;
+  top: 50px;
+}
+
+.asr-item {
+  background: linear-gradient(180deg, #8F8CFF 0%, #B8F1FF 45.48%, #B8EEFA 100%);
+}
+.asr-item::after {
+  background: url(../img/dhuhr-bg.png) no-repeat center bottom;
+  background-size: contain;
+}
+.asr-item::before {
+  background: url(../img/sun.png) no-repeat center center;
+  background-size: contain;
+  left: 30px;
+  bottom: 100px;
+}
+
+.maghrib-item {
+  background: linear-gradient(180deg, #8F2681 0%, #CB4F71 61.37%, #C53B85 100%);
+}
+.maghrib-item::after {
+  background: url(../img/magh-bcg.png) no-repeat center bottom;
+  background-size: contain;
+}
+.maghrib-item::before {
+  background: url(../img/maghr-vector.png) no-repeat center center;
+  background-size: contain;
+  right: 30%;
+  top: 70px;
+}
+
+.isha-item {
+  background: linear-gradient(180deg, #6B4CAA 0%, #B09ECB 51.19%, #D6D3E4 100%);
+}
+.isha-item::after {
+  background: url(../img/isha-bg.png) no-repeat center bottom;
+  background-size: contain;
+  opacity: 0.8;
+}
+.isha-item::before {
+  background: url(../img/fajr-after.png) no-repeat center center;
+  background-size: contain;
+  left: 20px;
+  top: 50px;
+}
+
+.sunrise--active:nth-child(2) {
+  height: 360px;
+}
+
+.dhuhr--active:nth-child(3) {
+  height: 360px;
+}
+
+.asr--active:nth-child(4) {
+  height: 360px;
+}
+
+.maghrib--active:nth-child(5) {
+  height: 360px;
+  box-shadow: 0px 0px 11px rgba(33, 33, 33, 0.2);
+}
+
+.isha--active:nth-child(6) {
+  height: 360px;
+}
+
+@media only screen and (max-width: 800px) {
+  .fajr--active:nth-child(1) {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+    height: auto;
+  }
+  .sunrise--active:nth-child(2) {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+    height: auto;
+  }
+  .dhuhr--active:nth-child(3) {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+    height: auto;
+  }
+  .asr--active:nth-child(4) {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+    height: auto;
+  }
+  .maghrib--active:nth-child(5) {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+    height: auto;
+  }
+  .isha--active:nth-child(6) {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+    height: auto;
+  }
+  .fajr-container {
+    background: linear-gradient(180deg, rgb(2, 2, 16) 0%, rgb(20, 20, 33) 32.14%, rgb(41, 39, 71) 91.61%);
+  }
+  .fajr-time {
+    background: linear-gradient(180deg, rgb(16, 13, 44) 0%, #28214D 44.79%, #2E2755 100%);
+  }
+  .fajr-time::after {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    content: "";
+    background: url(../img/fajr-after.png) no-repeat center center;
+    background-size: contain;
+    z-index: 0;
+    right: 20%;
+    top: 25%;
+  }
+  .fajr-timings {
+    background: url(../img/bacgr-fajr.png) no-repeat center 45%;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+  }
+  .fajr-timings::after {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    content: "";
+    background: url(../img/fajr-stars.png) no-repeat center center;
+    background-size: contain;
+    z-index: 0;
+    right: 20%;
+    top: 8%;
+  }
+  .dhuhr-time {
+    background: linear-gradient(180deg, #88BFFF 0%, #BFD1FF 44.79%, #4D6BB8 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .dhuhr-time::after {
+    width: 247px;
+    height: 247px;
+    position: absolute;
+    content: "";
+    background: url(../img/sun.png) no-repeat center center;
+    background-size: contain;
+    z-index: 0;
+    left: -100px;
+    top: 12%;
+  }
+  .dhuhr-timings {
+    background: url(../img/dhuhr-bg.png) no-repeat center 45%;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+  }
+  .dhuhr-timings::after {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    content: "";
+    background: url(../img/maghr-vector.png) no-repeat center center;
+    background-size: contain;
+    z-index: 0;
+    right: 10%;
+    top: 8%;
+  }
+  .dhuhr-container {
+    background: linear-gradient(180deg, #4b95ea 0%, #7691dc 44.79%, #4D6BB8 100%);
+  }
+  .asr-time {
+    background: linear-gradient(180deg, rgb(143, 38, 129) 0%, #CB4F71 51.19%, #C53B85 100%);
+    background: linear-gradient(180deg, #8F8CFF 0%, #B8F1FF 45.48%, #B8EEFA 100%);
+  }
+  .asr-time::after {
+    width: 290px;
+    height: 290px;
+    position: absolute;
+    content: "";
+    background: url(../img/sun.png) no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+    right: calc(50% - 195px);
+    top: 25%;
+  }
+  .asr-timings {
+    background: url(../img/asr-bg.png) no-repeat center 45%;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+  }
+  .asr-timings::after {
+    width: 35%;
+    height: 30%;
+    position: absolute;
+    content: "";
+    background: url(../img/maghr-vector.png) no-repeat center center;
+    background-size: contain;
+    z-index: 0;
+    right: 30%;
+    top: 12%;
+  }
+  .asr-container {
+    z-index: 6;
+    background: linear-gradient(180deg, rgb(143, 38, 129) 0%, #CB4F71 51.19%, #C53B85 100%);
+    background: linear-gradient(180deg, #575595 0%, #3d4e52 45.48%, #2d393b 100%);
+  }
+  .maghrib-time {
+    background: linear-gradient(180deg, rgb(143, 38, 129) 0%, #CB4F71 51.19%, #C53B85 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .maghrib-time::after {
+    width: 591px;
+    height: 591px;
+    position: absolute;
+    content: "";
+    background: url(../img/maghr-after.png) no-repeat center center;
+    background-size: contain;
+    z-index: 0;
+    right: 0%;
+    top: 18%;
+  }
+  .maghrib-timings {
+    background: url(../img/magh-bcg.png) no-repeat center 45%;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+  }
+  .maghrib-timings::after {
+    width: 35%;
+    height: 30%;
+    position: absolute;
+    content: "";
+    background: url(../img/maghr-vector.png) no-repeat center center;
+    background-size: contain;
+    z-index: 0;
+    right: 30%;
+    top: 12%;
+  }
+  .maghrib-container {
+    z-index: 6;
+    background: linear-gradient(180deg, rgb(108, 32, 97) 0%, #954057 51.19%, #C53B85 100%);
+  }
+  .isha-time {
+    background: linear-gradient(180deg, #6B4CAA 0%, #B09ECB 51.19%, #D6D3E4 100%);
+  }
+  .isha-time::after {
+    width: 251px;
+    height: 251px;
+    position: absolute;
+    content: "";
+    background: url(../img/fajr-after.png) no-repeat center center;
+    background-size: cover;
+    z-index: 0;
+    right: 12%;
+    top: 35%;
+  }
+  .isha-timings {
+    background: url(../img/isha-bg.png) no-repeat center 45%;
+    background-size: contain;
+    position: relative;
+    z-index: 1;
+  }
+  .isha-timings::after {
+    width: 35%;
+    height: 30%;
+    position: absolute;
+    content: "";
+    background: url(../img/fajr-stars.png) no-repeat center center;
+    background-size: contain;
+    z-index: 0;
+    right: 30%;
+    top: 12%;
+  }
+  .isha-container {
+    z-index: 6;
+    background: linear-gradient(180deg, #3f315d 0%, #413454 51.19%, #6d6391 100%);
+    overflow: hidden;
+  }
+  .fajr-item, .sunrise-item, .dhuhr-item, .asr-item, .maghrib-item, .isha-item {
+    background: transparent;
+  }
+}

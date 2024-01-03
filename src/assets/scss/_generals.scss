@@ -1,0 +1,151 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Jost", "Arial", sans-serif;
+
+  font-size: 20px;
+  font-weight: 900;
+  position: relative;
+  line-height: 1.5;
+  max-width: 1400px;
+  background: url(../img//home-bg.png) no-repeat;
+  background-size: cover;
+  background-position-y: 100px;
+  background-attachment: fixed;
+
+  &::after {
+    width: 755px;
+    height: calc(100vh - 100px);
+    position: absolute;
+
+    left: -15%;
+    z-index: -1;
+    content: '';
+    background: url(../img/body-after.png) no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position-y: 100px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear,
+        left bottom,
+        left top,
+        color-stop(0.44, #72e37c),
+        color-stop(0.72, #13db20),
+        color-stop(0.86, #177722));
+  }  
+
+}
+
+
+input {
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app__main {
+  display: flex;
+  margin-top: 100px;
+}
+
+.app__body {
+  width: 80%;
+  margin-left: auto;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 270px auto;
+  height: auto;
+}
+
+.input {
+  background-color: #d9d9d933;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: -0.04em;
+  color: rgba(2, 2, 2, 1);
+  width: 35%;
+  border-radius: 5px;
+  padding: 10px;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, .3);
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  body {
+    max-width: 500px;
+  }
+
+  .input {
+    width: 30%;
+    color: #FFFFFF;
+
+    &::placeholder {
+      color: #fefefe;
+    }
+  }
+
+  .container {
+    width: 95%;
+    display: block;
+  }
+
+  .background {
+    display: none
+  }
+
+  .main {
+    position: static;
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-height:500px) {
+  .list-container {
+    display: none;
+  }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
