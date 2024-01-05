@@ -1,0 +1,32 @@
+
+//   .swiper-slide {
+//     //text-align: center;
+//     //font-size: 18px;
+ 
+  
+//     /* Center slide text vertically */
+//     // display: flex;
+    
+//     //align-items:flex-end ;
+//   }
+.swiper-slide{
+    height: 310px;
+    max-width: 280px;
+    border-radius: 30px;
+    margin: 20px 0;
+  margin-bottom: 75px;
+    cursor: pointer;
+}
+
+.swiper-wrapper{
+    display: flex;
+    align-items: flex-end;
+}
+
+.swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+ 
+    background-color: black;
+}

@@ -7,7 +7,7 @@ export let sidebarRoutes=[
     },
     {
         id:2,
-        to:"/names",
+        to:"/ismlar",
         title:"Asmo-al-Husna",
         active:false
 
@@ -26,14 +26,14 @@ export let sidebarRoutes=[
     },
     {
         id:5,
-        to:"/calendar",
+        to:"/kalendar",
         title:"Oylik-taqvim",
         active:false
 
     },
     {
         id:6,
-        to:"/map",
+        to:"/xarita",
         title:"Xarita",
         active:false
     },

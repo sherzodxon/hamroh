@@ -1,8 +1,9 @@
 .sidebar{
-    width: 20%;
-    max-width: 280px;
-    position: fixed;
-    height: 100vh;
+    //width: 20%;
+    //max-width: 280px;
+
+    height: calc(100vh - 100px);
+    max-height: 1200px;
     background-color: #FFFFFF;
 }
 .sidebar__list{
