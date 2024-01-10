@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getCurrentTime, getTimings } from '../../boot/axios'
 import { useQuery } from 'react-query';
-import Timings from '../../assets/components/Timings';
+import Timings from '../../assets/components/section/Timings';
+import { useCurrentZone } from '../../contexts/context';
 
 const date =new Date();
 let minutes= date.getMinutes()
@@ -14,12 +15,12 @@ if (hours/10 < 1) {
 }
 
 function HomePage() {
-    const [field,setField]=useState("Tashkent?Uzbekistan");
-    const [prayerTime,setPrayerTime]=useState("- - - -")
-    const {data,isLoading,isError}=useQuery(field, ()=>getTimings(field));
-
+  const {currentZone}=useCurrentZone();
+    const [field,setField]=useState(``);
+    const [prayerTime,setPrayerTime]=useState("- - -");
+    const {data,isLoading}=useQuery(["timings" ,field], ()=>getTimings(field));
     const [time,setTime]=useState(`${hours}:${minutes}`);
-   
+ 
 function currentTimeClass(params) {
    
     if (time >=  params[0].time&& time <= params[1].time) {
@@ -42,17 +43,17 @@ function currentTimeClass(params) {
      }
 }
    useEffect(()=>{
-    // if (!isLoading) {
-    //     (async () => {
-    //       setTime(await getCurrentTime(data.timezone))
-    //       })()
-    // }
-    if (data) {
+        (async () => {
+       })()
+
+      setField(`${currentZone.state}?${currentZone.country}`);
+
+      if (data) {
         currentTimeClass(data.timings)
     }
 
-   },[data]);
-   console.log(prayerTime);
+   },[data,currentZone]);
+
     return (
         <>
         <div className="">{prayerTime}: {time}</div>

@@ -4,10 +4,12 @@ import Sidebar from '../components/Sidebar'
 import { Route, Routes } from 'react-router-dom'
 import { routes } from '../../pages/routeConfig'
 
+
 function AppLayout() {
     return (
         <>
-        <Header/>
+      
+       <Header/>
          <main className='app__main'>
          <Sidebar/>
           <div className="app__body">
@@ -18,6 +20,7 @@ function AppLayout() {
             </Routes>
           </div>
          </main>
+     
         </>
     )
 }

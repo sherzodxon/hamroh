@@ -1,9 +1,14 @@
 import React from 'react'
 
 function Names() {
-    return (
-        <div className="">Names</div>
-    )
+        
+        return (
+          <div>
+            names
+            
+          </div>
+        );
+    
 }
 
 export default Names

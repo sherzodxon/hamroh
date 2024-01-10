@@ -1,9 +1,9 @@
-import React from 'react'
+import FormSection from '../../assets/components/section/Form'
 
 function Mention() {
+    
     return (
-        <>
-        <div className="">Mention</div></>
+        <FormSection />
     )
 }
 
