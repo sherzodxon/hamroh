@@ -10,7 +10,7 @@ import './index.scss'
 import { useCurrentZone } from '../../../../contexts/context';
 import InputSpinner from '../Spinner/InputSpinner';
 
-function FormSection({props}) {
+function FormSection({className,maxWidth,buttonTitle}) {
 const {setCurrentZone} =useCurrentZone()
 const [countryid, setCountryid] = useState(0);
 const [countryList, setCountriesList] = useState([]);
@@ -23,6 +23,7 @@ const [stateLoader,setStateLoader]=useState(false);
 const [cityLoader,setCityLoader]=useState(false)
 const [state,setState]=useState("");
 const [city,setCity]=useState("")
+const [timezone,setTimezone]=useState("")
 
 useEffect(() => {
 GetCountries().then((result) => {
@@ -33,18 +34,21 @@ async function getFinish() {
 const data={
 country:country,
 state:state,
-city:city
+city:city,
+timezone:timezone
 }
 setCurrentZone(data)
 }
 
 return (
-<Form layout="vertical" style={{ maxWidth: 600 }} onFinish={getFinish}>
-    <Form.Item  name="country"  rules={[{ required: true, message: 'Iltimos, davlat nomini kiriting' }]}>
+<Form className={className + " form"} style={{ maxWidth: maxWidth }} onFinish={getFinish}>
+<div className="form__input-wrapper">
+    <Form.Item style={{minWidth:200}}  name="country"  rules={[{ required: true, message: 'Iltimos, davlat nomini kiriting' }]}>
         <Select  placeholder="Davlat" onChange={(value)=> {
             const country = countryList[value]; //here you will get full country object.
             setCountryid(country.id);
             setCountry(country.name)
+            setTimezone(`${country.region}/${country.capital}`);
             setStateLoader(true)
             GetState(country.id).then((result) => {
             setStateList(result);
@@ -64,8 +68,9 @@ return (
             ))}
         </Select>
     </Form.Item>
+    </div>
     <div className="form__input-wrapper">
-    <Form.Item name="state" rules={[{ required: true, message: 'Iltimos, shahar nomini kiriting' }]}>
+    <Form.Item style={{minWidth:200}} name="state" rules={[{ required: true, message: 'Iltimos, shahar nomini kiriting' }]}>
         <Select disabled={stateChange} placeholder="Shtat/Viloyat" onChange={(value)=> {
             const state = stateList[value];
             setState(state.name)
@@ -87,7 +92,7 @@ return (
     <InputSpinner display={stateLoader}/>
     </div>
     <div className="form__input-wrapper">
-    <Form.Item name="city" rules={[{ required: true, message: 'Iltimos, mintaqa nomini kiriting' }]}>
+    <Form.Item style={{minWidth:200}} name="city" >
         <Select disabled={cityChange} placeholder="Tuman/Shahar" onChange={(value)=> {
             const city = cityList[value];
             setCity(city.name)
@@ -102,7 +107,7 @@ return (
     <InputSpinner display={cityLoader}/>
     </div>
     <Form.Item>
-        <Button htmlType='submit' key="submit">Submit</Button>
+        <Button htmlType='submit' key="submit" className='form__button' type='dashed' >{buttonTitle}</Button>
     </Form.Item>
     
 </Form>

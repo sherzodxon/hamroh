@@ -1,0 +1,19 @@
+.home{
+    position: relative;
+}
+.home__header{
+    display: flex;
+    max-width: 1020px;
+    padding: 0 50px;
+}
+
+.home__time {
+    color: #020202;
+    font-size: 5.1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -3.36px;
+    text-align: center;
+
+}

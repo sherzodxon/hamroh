@@ -1,0 +1,74 @@
+@keyframes search-active {
+    0%{
+        top: -300px;
+    }
+    100%{
+        top: 10px;
+    }
+}
+@keyframes search-close {
+    0%{
+        top: 10px;
+    }
+    100%{
+        top: -300px;
+    }
+}
+@mixin button {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #009959;
+    border-radius: 50%;
+    position: relative;
+
+    &::after {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        content: '';
+        top: 5px;
+        left: 6px;
+    }
+}
+.search{
+    margin-left: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+}
+
+.search__button {
+    @include button();
+    margin-top: 15px;
+    &::after {
+        background: url(../../img//search-button.svg);
+    }
+}
+.search__button--close{
+    @include button();
+   margin-top: 15px;
+    &::after {
+        background: url(../../img//x.svg) no-repeat center center;
+        left: 5px;
+    }
+}
+.search__wrapper{
+    position: absolute;
+    top: -300px;
+    right: 50px;
+    animation-name: search-close;
+    animation-duration: 250ms;
+}
+.search__wrapper--active{
+    position: absolute;
+    top:10px;
+    z-index: 29;
+    right: 50px;
+    border-radius: 20px;
+    box-shadow: 0 30px 50px rgba(149, 144, 144, 0.618), 0 45px 26px rgba(172, 162, 162, 0.624);
+    
+    animation-name: search-active;
+    animation-duration: 200ms;
+}

@@ -1,4 +1,4 @@
-import FormSection from '../../assets/components/section/Form'
+import FormSection from '../../assets/components/section/FormSection'
 
 function Mention() {
     

@@ -1,0 +1,36 @@
+.home-loader {
+    width: 13px;
+    height: 50px;
+    border-radius: 4px;
+    display: block;
+    margin: 200px auto;
+    position: absolute;
+    left: calc(50% - 16px);
+    background: currentColor;
+    color: #009959;
+    box-sizing: border-box;
+    animation: animloader 0.3s 0.3s linear infinite alternate;
+  }
+  
+  .home-loader::after, .home-loader::before {
+    content: '';
+    width: 13px;
+    height: 50px;
+    border-radius: 4px;
+    background: currentColor;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    box-sizing: border-box;
+    animation: animloader 0.3s  0.45s  linear infinite alternate;
+  }
+  .home-loader::before {
+    left: -20px;
+    animation-delay: 0s;
+  }
+  
+  @keyframes animloader {
+    0%   { height: 48px} 
+    100% { height: 4px}
+  }
