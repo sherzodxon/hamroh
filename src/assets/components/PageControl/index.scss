@@ -1,0 +1,16 @@
+.page-control {
+    width: 9.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page-control__button{
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: url(../../img//control.svg) no-repeat center center;
+}
+.page-control__button--next{
+    transform: rotate(180deg); 
+}

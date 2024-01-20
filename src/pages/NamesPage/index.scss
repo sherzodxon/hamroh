@@ -1,0 +1,55 @@
+
+
+.names__header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.names__title {
+    font-size: 4rem;
+    padding-top: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -2px;
+}
+
+.names__page-button {
+    border-radius: 26px;
+    background: #F4F4F4;
+    padding: 12px 19px 12px 49px;
+    font-size: 1.8rem;
+    border: 1px solid #F4F4F4;
+    position: relative;
+    
+
+    &::after {
+        width: 3.4rem;
+        height: 3.4rem;
+        position: absolute;
+        background: url(../../assets/img/liked.svg) no-repeat center center;
+        content: '';
+        left: 11px;
+        top: 5px;
+    }
+    &:disabled{
+        opacity: 0.5;
+        color: black;
+        cursor:no-drop;
+    }
+}
+
+.names__page-button--active {
+    color: #009959;
+    border: 1px solid #009959;
+    background: #fff;
+
+    &::after {
+        background: url(../../assets/img/like-green.svg) no-repeat center center;
+    }
+}
+.names__body{
+    margin-top: 4rem;
+}

@@ -1,12 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './index.scss'
+import PageControl from '../../assets/components/PageControl';
+import NamesList from '../../assets/components/section/NamesList';
+import { useQuery } from 'react-query';
+import { getNames } from '../../boot/axios';
+import { NAMES } from '../../boot/useApi';
+import HomeSpinner from '../../assets/components/section/Spinner/HomeSpinner';
+import { useEffect } from 'react';
 
 function Names() {
-        
+  const [select,setSelect]=useState(false);
+  const [disabled,setDisabled]=useState(false)
+  const {data,isLoading,refetch}=useQuery('names',()=> getNames(NAMES.names));
+  const likedNames=data?.filter((element)=>element.isLiked=="true");
+   useEffect(()=>{
+     if (likedNames?.length==0) {
+      setSelect(false)
+      setDisabled(true)
+     }
+     else{
+      setDisabled(false)
+     }
+   },[likedNames])
         return (
-          <div>
-            names
-            
+        <div   className="names">
+          <div  className="names__container container">
+             <div className="names__header">
+              <PageControl next="/qur'on"/>
+              <h2 className='names__title'>Asmo al-Husna</h2>
+              <button disabled={disabled} onClick={()=>setSelect(!select)} className={select?'names__page-button  names__page-button--active':'names__page-button'}>Tanlanganlar</button>
+             </div>
+             <div className="names__body">
+                {
+                  isLoading?<HomeSpinner />:<NamesList refetch={refetch} data={select?likedNames:data} />
+                }
+             </div>
           </div>
+        </div>
         );
     
 }

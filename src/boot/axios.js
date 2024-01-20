@@ -1,13 +1,17 @@
 import axios from "axios";
-    //     (async () => {
-    //    })()
+import {
+    book,
+    name,
+    surah
+} from "./useApi";
+
 
 const getTimings = async (params) => {
     const values = params.split("?");
     const city = values[0];
     const country = values[1]
     if (city && country) {
- 
+
         try {
 
             const response = await axios.get(`https://api.aladhan.com/v1/timingsByAddress?address=${city},%20${country}&method=8`);
@@ -15,9 +19,8 @@ const getTimings = async (params) => {
 
             return {
                 timezone: response.data.data.meta.timezone,
-                status:true,
-                timings: [
-                    {
+                status: true,
+                timings: [{
                         id: 1,
                         name: "Bomdod",
                         time: data.Fajr,
@@ -65,7 +68,7 @@ const getCurrentTime = async (params) => {
     try {
         //https://api.aladhan.com/v1/currentTime?zone=
         const response = await axios.get(`https://worldtimeapi.org/api/timezone/${params}`);
-         return response.data.datetime;
+        return response.data.datetime;
     } catch (error) {
         console.log(error);
     }
@@ -81,8 +84,51 @@ const getCurrentZone = async (latitude, longitude) => {
 
 }
 
+const getNames = async (url) => {
+    try {
+        const response = await name.get(url)
+        return response.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+const nameLiked = async (url, data) => {
+    try {
+        const response = await name.put(url, data);
+        return response.data;
+    } catch (error) {
+        console.log(error);
+    }
+};
+const getSurahs = async (url) => {
+    try {
+        const response = await book.get(url);
+        return response.data
+    } catch (error) {
+        console.log(error);
+    }
+}
+const oneSurah = async (url, id) => {
+    try {
+        const response = await surah.get(url, id);
+        const translatedRes = await axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/uzb-muhammadsodikmu/${id}.json`);
+        const translatedData = translatedRes.data.chapter
+        return response.data.data.ayahs.map((element) => ({
+            id: element.number,
+            textArabic: element.text,
+            textUzb: translatedData[element.number - 1].text
+
+        }))
+    } catch (error) {
+
+    }
+}
 export {
     getTimings,
     getCurrentTime,
-    getCurrentZone
+    getCurrentZone,
+    getNames,
+    nameLiked,
+    getSurahs,
+    oneSurah
 }

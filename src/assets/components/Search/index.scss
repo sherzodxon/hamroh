@@ -15,16 +15,16 @@
     }
 }
 @mixin button {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
     display: block;
     background: #009959;
     border-radius: 50%;
     position: relative;
 
     &::after {
-        width: 30px;
-        height: 30px;
+        width: 3rem;
+        height: 3rem;
         position: absolute;
         content: '';
         top: 5px;

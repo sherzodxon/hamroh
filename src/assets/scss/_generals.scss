@@ -55,20 +55,20 @@ ol {
   margin-top: 80px;
 }
 
-// .app__body{
-//   flex-grow: 1;
-// max-width: 1420px;
-// }
+.app__body{
+  flex-grow: 1;
+max-width: 1420px;
+}
 
 .container {
   position: relative;
   border-radius: 10px;
   background: #FFF;
   margin: 17px;
-  height: calc(100vh - 134px);
+  height: calc(100vh - 135px);
   overflow-y: scroll;
   max-height: 1200px;
-  padding: 15px;
+  padding: 15px 30px;
   margin-top: 10px;
   width: auto;
   &::-webkit-scrollbar {
