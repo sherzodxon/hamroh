@@ -72,18 +72,24 @@ max-width: 1420px;
   margin-top: 10px;
   width: auto;
   &::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
     height: 8px;
     
 }
 &::-webkit-scrollbar-thumb {
-  border-radius: 99px;
+  border-radius: 90px;
   padding-right: 2px;
-  background-color: rgb(79, 75, 75,0.7);
+  background-color: rgba(169, 167, 167, 0.7);
 }
 
 }
-
+.ant-input,.ant-select-selector, .ant-select-selection-search-input, .ant-select-selection-search{
+  //border-color: #009959;
+  &:focus,&:hover{
+    border-color: #009959;
+    outline: #009959;
+  }
+}
 
 .input {
   background-color: #d9d9d933;

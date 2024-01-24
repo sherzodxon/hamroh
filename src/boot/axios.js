@@ -4,6 +4,7 @@ import {
     name,
     surah
 } from "./useApi";
+import { addMinutesToTime } from "./functions";
 
 
 const getTimings = async (params) => {
@@ -41,7 +42,7 @@ const getTimings = async (params) => {
                     {
                         id: 4,
                         name: "Asr",
-                        time: data.Asr,
+                        time: addMinutesToTime(data.Asr),
                         class: "asr-item"
                     },
                     {
@@ -112,15 +113,17 @@ const oneSurah = async (url, id) => {
     try {
         const response = await surah.get(url, id);
         const translatedRes = await axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/uzb-muhammadsodikmu/${id}.json`);
-        const translatedData = translatedRes.data.chapter
-        return response.data.data.ayahs.map((element) => ({
+        const translatedData = await translatedRes.data.chapter
+        return await response.data.data.ayahs.map((element) => ({
             id: element.number,
+            numberInSurah:element.numberInSurah, 
             textArabic: element.text,
-            textUzb: translatedData[element.number - 1].text
+            textUzb: translatedData[element.numberInSurah - 1].text
 
         }))
+     
     } catch (error) {
-
+    console.log(error);
     }
 }
 export {

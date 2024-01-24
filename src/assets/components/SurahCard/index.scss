@@ -1,0 +1,76 @@
+.surah-card{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: #FCFCFC;
+    padding: 1.5rem 4rem;
+    color: #000;
+    text-decoration: none;
+    position: relative;  
+    transition: 0.3s;
+    &:hover{
+        background: #009959;
+        color: #fff;
+        transition: 0.3s;
+        .surah-card__number{
+            color: #fff;
+            background-color: #009959;
+            transition: 0.3s;
+            &::after{
+                background:  linear-gradient(to bottom left,#fff, #9ef829);
+            }
+        }
+    }
+}
+.surah-card__leftbox{
+    display: flex;
+
+}
+.surah-card__number{
+    text-align: center;
+    display: inline;
+    margin-right: 20px;
+    padding: 0px 4px;
+    position: relative;
+    z-index: 2;
+    color: #009959;
+    background: #FCFCFC;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 50% 10%;
+    transition: 0.3s;
+    // background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+    // -webkit-text-fill-color: transparent;
+    // background-clip: text;
+    &::after{
+        width: 114%;
+        height: 114%;
+        content: '';
+        position: absolute;
+        background: linear-gradient(to bottom left,#9ef829, #009054);
+        border-radius: 50% 10%;
+        left: -7%;
+        top: -7%;
+        z-index: -1;
+    }
+}
+.arabic-name{
+    font-family: 'Noto Naskh Arabic';
+    text-align: right;
+    text-decoration: none;
+    font-size: 3rem;
+}
+.surah-card__name{
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: -1.2px;
+    line-height: normal;
+}
+.surah-card__link{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+}

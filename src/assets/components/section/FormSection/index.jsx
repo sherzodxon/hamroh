@@ -11,7 +11,7 @@ import { useCurrentZone } from '../../../../contexts/context';
 import InputSpinner from '../Spinner/InputSpinner';
 
 function FormSection({className,maxWidth,buttonTitle}) {
-const {setCurrentZone} =useCurrentZone()
+const {currentZone,setCurrentZone} =useCurrentZone()
 const [countryid, setCountryid] = useState(0);
 const [countryList, setCountriesList] = useState([]);
 const [stateChange,setStateChange]=useState(true);
@@ -44,7 +44,7 @@ return (
 <Form className={className + " form"} style={{ maxWidth: maxWidth }} onFinish={getFinish}>
 <div className="form__input-wrapper">
     <Form.Item style={{minWidth:200}}  name="country"  rules={[{ required: true, message: 'Iltimos, davlat nomini kiriting' }]}>
-        <Select  placeholder="Davlat" onChange={(value)=> {
+        <Select placeholder="Davlat" onChange={(value)=> {
             const country = countryList[value]; //here you will get full country object.
             setCountryid(country.id);
             setCountry(country.name)

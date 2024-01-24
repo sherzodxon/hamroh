@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import { getCurrentZone } from '../boot/axios';
+import RegistrationPage from '../pages/RegistrationPage';
 export const DataCurrentZone = createContext();
 
 const  CurrentZoneProvider=({children})=> {
@@ -15,20 +16,21 @@ const  CurrentZoneProvider=({children})=> {
     });
 
     useEffect(()=>{
+      if (latitude) {
         (async () => {
           setCurrentZone(await getCurrentZone(latitude,longitude))
         })()
+      }
     },[latitude])
-    
-    if (!zone) {
-      return(
-        <h1>Ruxsat yoq</h1>
-      )
-    }
-    else
+    useEffect(()=>{
+     if (currentZone?.city) {
+      setZone(true)
+     }
+    },[currentZone])
+  
     return (
         <DataCurrentZone.Provider value={{currentZone,setCurrentZone}}>
-           {children}
+           {zone?children:<RegistrationPage/>}
         </DataCurrentZone.Provider>
     )
 }

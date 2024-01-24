@@ -7,6 +7,7 @@ import { getNames } from '../../boot/axios';
 import { NAMES } from '../../boot/useApi';
 import HomeSpinner from '../../assets/components/section/Spinner/HomeSpinner';
 import { useEffect } from 'react';
+import Title from '../../assets/components/Title';
 
 function Names() {
   const [select,setSelect]=useState(false);
@@ -27,7 +28,7 @@ function Names() {
           <div  className="names__container container">
              <div className="names__header">
               <PageControl next="/qur'on"/>
-              <h2 className='names__title'>Asmo al-Husna</h2>
+              <Title text="Asmo al-Husna"/>
               <button disabled={disabled} onClick={()=>setSelect(!select)} className={select?'names__page-button  names__page-button--active':'names__page-button'}>Tanlanganlar</button>
              </div>
              <div className="names__body">

@@ -5,6 +5,7 @@ import Names from "./NamesPage"
 import Book from "./BookPage"
 import Calendar from "./CalendarPage"
 import NamePage from "./NamePage"
+import SurahPage from "./SurahPage"
 
 export const routes = [{
         id: 1,
@@ -40,5 +41,10 @@ export const routes = [{
         id: 7,
         path: "ismlar/:id",
         element: < NamePage />
+    },
+    {
+        id: 8,
+        path: "suralar/:id",
+        element: < SurahPage />
     }
 ]

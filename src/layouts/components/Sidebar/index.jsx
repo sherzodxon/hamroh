@@ -44,11 +44,8 @@ return (
                 <div id="nav-footer-titlebox"><a id="nav-footer-title" href="https://github.com/sherzodxon"
                         target="_blank">sherzodxon</a><span id="nav-footer-subtitle">Admin</span>
                 </div>
-                <label htmlFor="nav-footer-toggle"><i className="fas fa-caret-up"></i></label>
             </div>
-            <div id="nav-footer-content">
-
-            </div>
+            
         </div>
     </div>
 </section>

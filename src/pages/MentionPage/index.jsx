@@ -3,7 +3,7 @@ import FormSection from '../../assets/components/section/FormSection'
 function Mention() {
     
     return (
-        <FormSection />
+       <div className=""></div>
     )
 }
 

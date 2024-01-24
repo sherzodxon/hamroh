@@ -9,7 +9,7 @@ function Search() {
           <button onClick={()=>{setActive(!active)}} className={active?'search__button--close':'search__button'}>
             </button>
             <div className={active?"search__wrapper--active":"search__wrapper"}>
-                    <FormSection className={"search__form"} maxWidth={850} buttonTitle="Yuborish"/>
+                    <FormSection className={"search__form"} maxWidth={300} buttonTitle="Yuborish"/>
             </div>
         </div>
     )

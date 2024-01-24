@@ -6,13 +6,8 @@ import { useCurrentZone } from '../../contexts/context';
 import './index.scss'
 import Search from '../../assets/components/Search';
 import HomeSpinner from '../../assets/components/section/Spinner/HomeSpinner';
+import { checkTime } from '../../boot/functions';
 
-function checkTime(i) {
-if (i < 10)
- { 
-    i="0" + i; 
-} 
-return i; } 
 function HomePage() { 
     const today=new Date(); 
     const seconds=today.getSeconds();

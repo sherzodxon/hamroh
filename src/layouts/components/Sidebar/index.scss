@@ -142,6 +142,7 @@
 
 #nav-toggle:checked~#nav-footer #nav-footer-avatar {
     margin-left: 0;
+    
     left: 50%;
     transform: translate(-50%);
 }
@@ -152,7 +153,16 @@
     transition: opacity 0.1s;
     pointer-events: none;
 }
-
+// #nav-toggle:checked~#nav-footer  #nav-footer-heading{
+  
+//         #nav-footer-avatar{
+//             left: 0;
+//             display: block;
+//             width: 30px;
+//             height: 30px;
+//         }
+    
+// }
 #nav-bar {
     //position: fixed;
     background: var(--navbar-dark-primary);
@@ -166,14 +176,7 @@
 
 }
 
-#nav-bar hr {
-    margin: 0;
-    position: relative;
-    left: 10px;
-    width: calc(100% - 32px);
-    border: none;
-    border-top: solid 1px var(--navbar-dark-secondary);
-}
+
 
 #nav-bar a {
     color: inherit;
@@ -255,13 +258,10 @@ label[for=nav-toggle] {
 }
 
 #nav-footer {
-    position: relative;
     width: var(--navbar-width);
     height: 54px;
     background: var(--navbar-dark-secondary);
     border-radius: 16px;
-    display: flex;
-    flex-direction: column;
     z-index: 2;
     transition: width 0.2s, height 0.2s;
 }
@@ -281,65 +281,32 @@ label[for=nav-toggle] {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    overflow: hidden;
     transform: translate(0);
     transition: 0.2s;
 }
 
 #nav-footer-avatar img {
     height: 100%;
+    border-radius: 50%;
 }
 
 #nav-footer-titlebox {
     position: relative;
     margin-left: 16px;
-    width: 10px;
     display: flex;
     flex-direction: column;
     transition: opacity 1s;
+
+}
+#nav-footer-title{
+    display: block;
+   // background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+   background: linear-gradient(to right, #ef3b36, #ffffff)
+;    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 #nav-footer-subtitle {
     color: var(--navbar-light-secondary);
     font-size: 0.6rem;
-}
-
-#nav-footer-toggle:checked+#nav-footer {
-    height: 30%;
-    min-height: 54px;
-}
-
-#nav-footer-toggle:checked+#nav-footer label[for=nav-footer-toggle] {
-    transform: rotate(180deg);
-}
-
-label[for=nav-footer-toggle] {
-    position: absolute;
-    right: 0;
-    width: 3rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.2s, opacity 0.2s;
-}
-
-#nav-footer-content {
-    margin: 0 16px 16px 16px;
-    border-top: solid 1px var(--navbar-light-secondary);
-    padding: 16px 0;
-    color: var(--navbar-light-secondary);
-    font-size: 0.8rem;
-    overflow: auto;
-}
-
-#nav-footer-content::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-#nav-footer-content::-webkit-scrollbar-thumb {
-    border-radius: 99px;
-    background-color: #D62929;
-
 }
