@@ -1,11 +1,13 @@
 .surah-card{
+    max-width: 350px;
+    min-width: 320px;
     margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 10px;
     background: #FCFCFC;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 2rem;
     color: #000;
     text-decoration: none;
     position: relative;  

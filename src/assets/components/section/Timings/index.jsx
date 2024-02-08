@@ -5,6 +5,12 @@ import {Autoplay} from 'swiper/modules'
 import 'swiper/css';
 import './index.scss'
 function Timings({data, activeClass}) {
+ if (data.status) {
+    return(
+        <div className="">{data.status}</div>
+    )
+ }
+ else{
     return (
         <section className='timings'>
             <ul className='timings__list'>
@@ -17,7 +23,7 @@ function Timings({data, activeClass}) {
                     delay: 800,
                     disableOnInteraction: false
                 }}>
-                    {data.map(el => 
+                    {data?.timings.map(el => 
                     <SwiperSlide className={activeClass} key={el.id}><TimingsCard className={el.class} name={el.name} time={el.time}/></SwiperSlide>)
 }
                 </Swiper>
@@ -25,6 +31,7 @@ function Timings({data, activeClass}) {
             </ul>
         </section>
     )
+ }
 }
 
 export default Timings

@@ -1,11 +1,13 @@
 import React from 'react'
 import './index.scss'
-import logo from '../../assets/img/99name.svg'
-import { Link } from 'react-router-dom'
-function Map() {
-return (
 
-<></>
+function Map() {
+
+return (
+<div className="container">
+<h1>React Audio Player</h1>
+      {/* <AudioPlayer playlist={playlist} /> */}
+</div>
 )
 }
 

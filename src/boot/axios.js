@@ -15,7 +15,7 @@ const getTimings = async (params) => {
 
         try {
 
-            const response = await axios.get(`https://api.aladhan.com/v1/timingsByAddress?address=${city},%20${country}&method=8`);
+            const response = await axios.get(`https://apialadhan.com/v1/timingsByAddress?address=${city},%20${country}&method=8`);
             const data = await response.data.data.timings;
 
             return {
@@ -60,7 +60,9 @@ const getTimings = async (params) => {
                 ]
             }
         } catch (error) {
-            console.log(error);
+            return{
+                status:error.message
+            }
         }
 
     }
@@ -75,6 +77,7 @@ const getCurrentTime = async (params) => {
     }
 }
 const getCurrentZone = async (latitude, longitude) => {
+try {
     const response = await axios.get(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${(latitude)}&longitude=${longitude}`);
     return {
         country: response.data.countryName,
@@ -82,9 +85,16 @@ const getCurrentZone = async (latitude, longitude) => {
         city: response.data.locality,
         timezone: response.data.localityInfo.informative[1].name
     }
+} catch (error) {
+    return{
+        country:error.message,
+        state:error.message,
+        city:error.message,
 
+    }
 }
 
+}
 const getNames = async (url) => {
     try {
         const response = await name.get(url)
@@ -111,19 +121,29 @@ const getSurahs = async (url) => {
 }
 const oneSurah = async (url, id) => {
     try {
-        const response = await surah.get(url, id);
+        //const response = await surah.get(url, id);
+        const response = await axios.get(`https://api.alquran.cloud/v1/surah/${id}/ar.alafasy`);
         const translatedRes = await axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/uzb-muhammadsodikmu/${id}.json`);
         const translatedData = await translatedRes.data.chapter
         return await response.data.data.ayahs.map((element) => ({
             id: element.number,
             numberInSurah:element.numberInSurah, 
             textArabic: element.text,
-            textUzb: translatedData[element.numberInSurah - 1].text
-
+            textUzb: translatedData[element.numberInSurah - 1].text,
+            audio:element.audio,
+            isPlay:false
         }))
      
     } catch (error) {
     console.log(error);
+    }
+}
+const getAudio = async(url)=>{
+    try {
+        const res = await axios.get(`https://api.alquran.cloud/v1/surah/${url}/ar.alafasy`);
+        console.log(res);
+    } catch (error) {
+       console.log(error); 
     }
 }
 export {
@@ -133,5 +153,6 @@ export {
     getNames,
     nameLiked,
     getSurahs,
-    oneSurah
+    oneSurah,
+    getAudio
 }

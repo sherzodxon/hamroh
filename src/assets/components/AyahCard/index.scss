@@ -1,0 +1,30 @@
+.oyat-card__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+   
+}
+.oyat-card__number{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.oyat-card{
+    border-bottom: 1px solid rgb(2, 2, 2,0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+}
+.oyat-card__text{
+    font-family: 'Roboto Slab';
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.arabic-text{
+    font-family: 'Noto Naskh Arabic';
+    text-align: right;
+    text-decoration: none;
+    font-size: 3rem;
+}
+.oyat-list__list{
+    margin-top: 3rem;
+}

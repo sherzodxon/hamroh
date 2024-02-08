@@ -16,7 +16,7 @@ function HomePage() {
     const {currentZone}=useCurrentZone(); 
     const [field,setField]=useState(`Tashkent/Uzbekistan`); 
     const [prayerTime,setPrayerTime]=useState("- - -"); 
-    const {data}=useQuery(["timings",field], ()=>getTimings(field));
+    const {data,error}=useQuery(["timings",field], ()=>getTimings(field));
     const [hour,setHour]=useState(hours);
     const [minute,setMinute]=useState(minutes)
     const [second, setSecond] = useState(seconds);
@@ -81,11 +81,10 @@ function HomePage() {
         },[currentZone.timezone]);
 
         useEffect(()=>{
-        if (data) {
+        if (data?.timings) {
         currentTimeClass(data.timings)
         }
         },[data,time]);
-
 
         return (
         <section className='home'>
@@ -94,7 +93,7 @@ function HomePage() {
                 <Search />
             </div>
             {!data?<HomeSpinner/>:
-            <Timings data={data.timings} activeClass={prayerTime} />
+            <Timings data={data} activeClass={prayerTime} />
             }
             
         </section>

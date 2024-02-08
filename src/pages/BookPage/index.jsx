@@ -3,7 +3,7 @@ import PageControl from '../../assets/components/PageControl'
 import './index.scss'
 import SearchInput from '../../assets/components/SearchInput'
 import Title from '../../assets/components/Title'
-import BookList from '../../assets/components/section/BookList'
+import SurahList from '../../assets/components/section/SurahList'
 import { useQuery } from 'react-query'
 import { getSurahs } from '../../boot/axios'
 import { BOOK } from '../../boot/useApi'
@@ -29,7 +29,7 @@ if (!isLoading) {
             <SearchInput maxWidth={150} placeholder='Suralarni qidirish' type="search"/>
          </div>
          <div className="book__body">
-           {isLoading?<HomeSpinner/>:<BookList data={surahs}/>}
+           {isLoading?<HomeSpinner/>:<SurahList data={surahs}/>}
          </div>
         </div>
      </div>
