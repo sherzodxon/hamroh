@@ -1,29 +1,77 @@
-import React, {
-    useState
-} from 'react';
+import React from 'react';
 import './index.scss'
-import { playAyah } from '../../../features/ayahs/ayahsSlice';
-import { useDispatch } from 'react-redux';
-import Player from '../AudioPlayer';
-
+import play from '../../img/play.svg';
+import pause from '../../img/pause.svg'
+import { useDispatch, useSelector } from 'react-redux';
+import {
+    currentPlayingAudio,
+    openAudioPlayer,
+    startPlaying,
+    stopPlaying,
+ } from "../../../features/ayahs/audioSlice";
 
 function AyahCard({
+    transText,
+    arabicText,
     number,
-    textUzb,
-    textArab,
-    playing,
-    numberOfAyahs
+    setPlaylist,
+    audioUrl,
+    ayahName,
+    surahNumber,
 }) {
-    
+    const dispatch = useDispatch();
+    const { isPlaying, currentPlayingAudio: currentAudio } = useSelector(
+        (state) => state.audio
+     );
+     const isCurrPlaying = isPlaying && currentAudio.url === audioUrl;
     return (
         <li className='oyat-card'>
-            <Player audioUrl={(id)=>`https://cdn.islamic.network/quran/audio/128/ar.alafasy/${id}.mp3`} number={number}  numberOfAyahs={numberOfAyahs} isPlaying={playing}/>
+            <button
+               onClick={() => {
+                  if (!isPlaying) {
+                     setPlaylist();
+                     dispatch(openAudioPlayer());
+                     dispatch(
+                        currentPlayingAudio({
+                           audioUrl,
+                           ayahName,
+                           surahNumber,
+                           ayahNumber: number,
+                        })
+                     );
+                     dispatch(startPlaying());
+                  } else {
+                     if (currentAudio.url === audioUrl) {
+                        return dispatch(stopPlaying());
+                     }
+                     dispatch(
+                        currentPlayingAudio({
+                           audioUrl,
+                           ayahName,
+                           surahNumber,
+                           ayahNumber: number,
+                        })
+                     );
+                     setPlaylist();
+                  }
+               }}
+               className={`styles.playBtn`}
+            >
+               <img
+                  src={
+                     isCurrPlaying
+                        ? play
+                        : pause
+                  }
+                  alt="sdds"
+               />
+            </button>
              <div className="oyat-card__wrapper">
                 <p className='oyat-card__number'>{number}</p>
-                 <p className='oyat-card__text arabic-text'>{textArab}</p>
+                 <p className='oyat-card__text arabic-text'>{arabicText}</p>
              </div> 
 
-             <p className='oyat-card__text'>{textUzb}</p>
+             <p className='oyat-card__text'>{transText}</p>
         </li>
     )
 }

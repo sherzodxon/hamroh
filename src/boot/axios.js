@@ -12,15 +12,11 @@ const getTimings = async (params) => {
     const city = values[0];
     const country = values[1]
     if (city && country) {
-
         try {
-
-            const response = await axios.get(`https://apialadhan.com/v1/timingsByAddress?address=${city},%20${country}&method=8`);
+            const response = await axios.get(`https://api.aladhan.com/v1/timingsByAddress?address=${city},%20${country}&method=8`);
             const data = await response.data.data.timings;
-
             return {
                 timezone: response.data.data.meta.timezone,
-                status: true,
                 timings: [{
                         id: 1,
                         name: "Bomdod",

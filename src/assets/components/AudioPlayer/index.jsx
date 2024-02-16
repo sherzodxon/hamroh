@@ -1,71 +1,109 @@
+import React, { useContext, useEffect, useRef } from "react";
+import play from '../../img/play.svg';
+import pause from '../../img/pause.svg'
+import { useSelector, useDispatch } from "react-redux";
 import {
-  useState,
-  useEffect
-} from 'react';
-import {
-  useDispatch,
-  useSelector
-} from 'react-redux';
-import {
-  pauseAyah,
-  playAyah
-} from '../../../features/ayahs/ayahsSlice';
+   closeAudioPlayer,
+   currentPlayingAudio as currentPlayingAudioAction,
+   startPlaying,
+   stopPlaying,
+   setPlaylist,
+} from "../../../features/ayahs/audioSlice";
+import { PlaylistsContext } from "../../../contexts/audioContext";
 
+const AudioPlayer = () => {
+   const { playlist } = useContext(PlaylistsContext);
+   const dispatch = useDispatch();
 
-const Audios = (audioUrl, number, isPlaying, numberOfAyahs) => {
+   const {
+      isOpenAudioPlayer: isOpen,
+      currentPlayingAudio,
+      isPlaying,
+      currentPlayList,
+   } = useSelector((state) => state.audio);
+   let currAudio = useRef();
 
-  const dispatch = useDispatch();
-  const posts = useSelector((state) => state.ayahs.data);
-  let [playing, setPlaying] = useState(isPlaying);
-  const [curNumber, setCurNumber] = useState(number);
-  
-//console.log(curNumber);
+   // const refAudio = useRef(currAudio);
 
-  function onEnded() {
-    dispatch(pauseAyah(number))
-    if (curNumber < numberOfAyahs) {
-     
-      setCurNumber(number+1)
-       dispatch(playAyah(curNumber));
-    }else{
-      setCurNumber(number)
-    }
+   useEffect(() => {
+      if (isPlaying) {
+         currAudio.current.play();
+      }
+      if (!currAudio.current.ended && !isPlaying) {
+         currAudio.current.pause();
+      }
+      currAudio.current.onended = () => {
+         if (currentPlayingAudio.ayahNumber < currentPlayList.length) {
+            const { audio: url } =
+               currentPlayList[currentPlayingAudio.ayahNumber];
+            dispatch(
+               currentPlayingAudioAction({
+                  audioUrl: url,
+                  ayahName: currentPlayingAudio.ayahName,
+                  surahNumber: currentPlayingAudio.surahNumber,
+                  ayahNumber: currentPlayingAudio.ayahNumber + 1,
+               })
+            );
+            return dispatch(setPlaylist(playlist));
+         }
+         dispatch(currentPlayingAudioAction({}));
+         dispatch(stopPlaying());
+         dispatch(closeAudioPlayer());
+      };
+   }, [currentPlayingAudio, isPlaying]);
 
-  }
-
-  function toggle() {
-
-  //setCurNumber(number)
-    isPlaying ? dispatch(pauseAyah(curNumber)) : dispatch(playAyah(curNumber));
-    //  isPlaying ? audio.play() : audio.pause();
-  
-  };
-  // useEffect(() => {
-  //   toggle()
-  // }, [curNumber])
-  useEffect(() => {
-    if (isPlaying) {
-      const audio = new Audio(audioUrl(number));
-      isPlaying ? audio.play() : audio.pause()
-      audio.addEventListener('ended', onEnded);
-    }
-  }, [isPlaying]);
-
-  return [toggle];
+   return (
+      <div
+         style={{ display: isOpen ? "block" : "none" }}
+         className={`styles.wrapper`}
+      >
+         <div className="container">
+            <div className={`styles.inner`}>
+               <div>
+                  <button
+                     onClick={() => {
+                        if (currAudio.current.paused) {
+                           currAudio.current.play();
+                           dispatch(startPlaying());
+                        } else {
+                           currAudio.current.pause();
+                           dispatch(stopPlaying());
+                        }
+                     }}
+                     className={`styles.playBtn`}
+                  >
+                     <img
+                        src={
+                           isPlaying
+                              ?play
+                              : pause
+                        }
+                        alt="sd"
+                     />
+                  </button>
+                  <p className={`styles.ayahName`}>
+                     {currentPlayingAudio.ayahName}
+                  </p>{" "}
+                  &nbsp; -- &nbsp;
+                  <span>
+                     [ {currentPlayingAudio.surahNumber} :{" "}
+                     {currentPlayingAudio.ayahNumber} ]
+                  </span>
+               </div>
+               <audio src={currentPlayingAudio.url} ref={currAudio}></audio>
+               <button
+                  onClick={() => {
+                     dispatch(stopPlaying());
+                     dispatch(closeAudioPlayer());
+                  }}
+                  className={`styles.closeBtn`}
+               >
+                  <img src="/images/closeIcon.svg" alt="" />
+               </button>
+            </div>
+         </div>
+      </div>
+   );
 };
 
-const Player = ({
-  audioUrl,
-  number,
-  isPlaying,
-  numberOfAyahs
-}) => {
-  const [toggle] = Audios(audioUrl, number, isPlaying, numberOfAyahs);
-
-  return (
-    <div className='audio'>
-      <button onClick={toggle} className={isPlaying  ? "audio-button-play" : "audio-button-pause"}>{isPlaying?"play":"pause"}</button>
-    </div>
-  )   
-}
-export default Player
+export default AudioPlayer;
