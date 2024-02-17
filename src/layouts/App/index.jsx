@@ -3,12 +3,12 @@ import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import { Route, Routes } from 'react-router-dom'
 import { routes } from '../../pages/routeConfig'
+import AudioPlayer from '../../assets/components/AudioPlayer'
 
 
 function AppLayout() {
     return (
         <>
-      
        <Header/>
          <main className='app__main'>
          <Sidebar/>
@@ -18,9 +18,10 @@ function AppLayout() {
             <Route key={id} {...route} />
             ))}
             </Routes>
+            <AudioPlayer/>
           </div>
          </main>
-     
+        
         </>
     )
 }

@@ -57,7 +57,12 @@ ol {
 
 .app__body{
   flex-grow: 1;
-max-width: 1420px;
+//max-width: 1420px;
+position: relative;
+width: auto;
+box-sizing: border-box;
+overflow: hidden;
+//height: calc(100vh - 90px);
 }
 
 .container {
@@ -65,10 +70,11 @@ max-width: 1420px;
   border-radius: 10px;
   background: #FFF;
   margin: 17px;
-  height: calc(100vh - 135px);
+  height: calc(100vh - 120px);
   overflow-y: scroll;
   max-height: 1200px;
   padding: 15px 30px;
+  padding-bottom: 0;
   margin-top: 10px;
   width: auto;
   &::-webkit-scrollbar {
@@ -79,7 +85,7 @@ max-width: 1420px;
 &::-webkit-scrollbar-thumb {
   border-radius: 90px;
   padding-right: 2px;
-  background-color: rgba(169, 167, 167, 0.7);
+  background-color: #a9a7a7b3;
 }
 
 }
@@ -90,7 +96,12 @@ max-width: 1420px;
     outline: #009959;
   }
 }
-
+button{
+  background: transparent;
+  font-family: "Jost";
+  font-size: 1.6rem;
+  padding: 0;
+}
 .input {
   background-color: #d9d9d933;
   font-family: "Jost";

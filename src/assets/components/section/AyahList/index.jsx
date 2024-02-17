@@ -8,7 +8,8 @@ import { setPlaylist } from "../../../../features/ayahs/audioSlice";
 import { PlaylistsContext } from "../../../../contexts/audioContext";
 import { useState } from 'react';
 import axios from 'axios';
-import AudioPlayer from '../../AudioPlayer';
+import ErrorSection from '../Error';
+
 
 function AyahList() {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ function AyahList() {
   const [audios, setAudios] = useState([]);
   const [transTexts, setTransTexts] = useState({});
   const [arabicTexts, setArabicTexts] = useState([]);
+  const [error,setError]=useState(false)
   const [isLoading, setIsLoading] = useState(true);
   const { setCurrentPlaylistContext } = useContext(PlaylistsContext);
    const {id}=useParams();
@@ -36,8 +38,12 @@ function AyahList() {
          }
       )
    )
+   .catch(()=>{
+      setError(true)
+   })
    .finally(() => {
       setIsLoading(false);
+   
    });
    }
   useEffect(() => {
@@ -45,18 +51,16 @@ function AyahList() {
     getAllData()
   }, []);
 
-  // if (status === 'loading') {
-  //   return <HomeSpinner/>;
-  // }
+  
 
-  // if (status === 'failed') {
-  //   return <div>Error: {error}</div>;
-  // }
-
+  if (error) {
+    return <ErrorSection/>;
+  }
+  
     return (
        <div className="oyat-list">
        <PageControl next="/zikr"/>
-       <AudioPlayer/>
+   
          <ul className='oyat-list__list'>
            {
             isLoading?<HomeSpinner/>: transTexts.ayahs?.map((item,index)=><AyahCard  transText={item.text}

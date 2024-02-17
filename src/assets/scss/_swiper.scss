@@ -1,14 +1,4 @@
 
-//   .swiper-slide {
-//     //text-align: center;
-//     //font-size: 18px;
- 
-  
-//     /* Center slide text vertically */
-//     // display: flex;
-    
-//     //align-items:flex-end ;
-//   }
 .swiper-slide{
     height: 310px;
     max-width: 280px;
@@ -22,7 +12,8 @@
     display: flex;
     align-items: flex-end;
     height: auto;
-    width: 100%;
+    width: auto;
+   padding-bottom: 2rem;
 }
 
 .swiper-pagination-bullet{

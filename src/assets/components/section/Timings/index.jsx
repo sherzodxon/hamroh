@@ -4,10 +4,11 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {Autoplay} from 'swiper/modules'
 import 'swiper/css';
 import './index.scss'
+import ErrorSection from '../Error';
 function Timings({data, activeClass}) {
  if (data.status) {
     return(
-        <div className="">{data.status}</div>
+        <ErrorSection/>
     )
  }
  else{

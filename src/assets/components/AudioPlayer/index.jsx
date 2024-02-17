@@ -1,7 +1,9 @@
 import React, { useContext, useEffect, useRef } from "react";
-import play from '../../img/play.svg';
-import pause from '../../img/pause.svg'
+import play from '../../img/pause-white.svg';
+import pause from '../../img/play-white.svg';
+import close from '../../img/x-lg.svg'
 import { useSelector, useDispatch } from "react-redux";
+import "./index.scss"
 import {
    closeAudioPlayer,
    currentPlayingAudio as currentPlayingAudioAction,
@@ -23,7 +25,7 @@ const AudioPlayer = () => {
    } = useSelector((state) => state.audio);
    let currAudio = useRef();
 
-   // const refAudio = useRef(currAudio);
+   // const refAudio = useRef(currAudio); style={{ display: isOpen ? "block" : "none" }}
 
    useEffect(() => {
       if (isPlaying) {
@@ -54,12 +56,11 @@ const AudioPlayer = () => {
 
    return (
       <div
-         style={{ display: isOpen ? "block" : "none" }}
-         className={`styles.wrapper`}
+         className={isOpen?"audio":"audio--closed"}
       >
-         <div className="container">
-            <div className={`styles.inner`}>
-               <div>
+         <div className="audio__wrapper">
+            <div className="audio__inner">
+               <div className="audio__info">
                   <button
                      onClick={() => {
                         if (currAudio.current.paused) {
@@ -70,7 +71,7 @@ const AudioPlayer = () => {
                            dispatch(stopPlaying());
                         }
                      }}
-                     className={`styles.playBtn`}
+                     className="audio__button"
                   >
                      <img
                         src={
@@ -81,10 +82,10 @@ const AudioPlayer = () => {
                         alt="sd"
                      />
                   </button>
-                  <p className={`styles.ayahName`}>
+                  <p className="audio__ayahname">
                      {currentPlayingAudio.ayahName}
                   </p>{" "}
-                  &nbsp; -- &nbsp;
+                  {/* &nbsp; -- &nbsp; */}
                   <span>
                      [ {currentPlayingAudio.surahNumber} :{" "}
                      {currentPlayingAudio.ayahNumber} ]
@@ -96,9 +97,9 @@ const AudioPlayer = () => {
                      dispatch(stopPlaying());
                      dispatch(closeAudioPlayer());
                   }}
-                  className={`styles.closeBtn`}
+                  className="audio__close-btn"
                >
-                  <img src="/images/closeIcon.svg" alt="" />
+                  <img src={close} alt="" />
                </button>
             </div>
          </div>

@@ -24,9 +24,12 @@ function AyahCard({
         (state) => state.audio
      );
      const isCurrPlaying = isPlaying && currentAudio.url === audioUrl;
+
     return (
-        <li className='oyat-card'>
-            <button
+        <li style={isCurrPlaying?{background:"#83ebc080"}:{background:"#fff"}}  className='oyat-card'>
+             <div className="oyat-card__wrapper">
+                <p className='oyat-card__number'>{number}</p>
+                 <button
                onClick={() => {
                   if (!isPlaying) {
                      setPlaylist();
@@ -55,22 +58,16 @@ function AyahCard({
                      setPlaylist();
                   }
                }}
-               className={`styles.playBtn`}
+               className="oyat-card__audio-button"
             >
                <img
-                  src={
-                     isCurrPlaying
-                        ? play
-                        : pause
+                  src={isCurrPlaying? play: pause
                   }
                   alt="sdds"
                />
             </button>
-             <div className="oyat-card__wrapper">
-                <p className='oyat-card__number'>{number}</p>
-                 <p className='oyat-card__text arabic-text'>{arabicText}</p>
              </div> 
-
+             <p className='oyat-card__text arabic-text'>{arabicText}</p>
              <p className='oyat-card__text'>{transText}</p>
         </li>
     )

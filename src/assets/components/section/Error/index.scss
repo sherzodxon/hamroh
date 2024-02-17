@@ -1,0 +1,116 @@
+// body {
+//     overflow: hidden;
+//   }
+//   html,
+  .error {
+    position: relative;
+    //background: #fff;
+    
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #274c5e;
+    overflow: hidden;
+  }
+  .error__container {
+    text-align: center;
+    position: relative;
+  }
+  .error__mainTitle {
+    display: block;
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+    //margin-right: 8rem;
+  }
+  .error__mainDescription {
+    max-width: 50%;
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+  .error__mainGraphic {
+    position: relative;
+  }
+  .error__cog {
+    width: 10rem;
+    height: 10rem;
+    fill: #009959;
+    transition: easeInOutQuint();
+    -webkit-animation: CogAnimation 5s infinite;
+            animation: CogAnimation 5s infinite;
+  }
+  .error__spanner {
+    position: absolute;
+    transform: rotate(20deg);
+    top: 12%;
+    left: 28%;
+    width: 10rem;
+    height: 10rem;
+    fill: #009959;
+    //-webkit-animation: SpannerAnimation 4s infinite;
+            animation: SpannerAnimation 4s infinite;
+  }
+  .error__hummingbird {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    fill: #009959;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .error__description{
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    max-width: 700px;
+  }
+  .error__refresh{
+    color: #009959;
+    font-weight: 600;
+  }
+  @-webkit-keyframes CogAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes CogAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+ 
+  @keyframes SpannerAnimation {
+    0% {
+      transform: translate3d(20px, 20px) rotate(0deg);
+    }
+    // 10% {
+    //   transform: translate3d(-1000px, 1000px, 1px) rotate(180deg);
+    // }
+    // 15% {
+    //   transform: translate3d(-1000px, 1000px, 1px) rotate(360deg);
+    // }
+    // 20% {
+    //   transform: translate3d(1000px, -1000px, 1px) rotate(180deg);
+    // }
+    // 30% {
+    //   transform: translate3d(-1000px, 1000px, 1px) rotate(360deg);
+    // }
+    // 40% {
+    //   transform: translate3d(1000px, -1000px, 1px) rotate(360deg);
+    // }
+    // 50% {
+    //   transform: translate3d(-1000px, 1000px, 1px) rotate(180deg);
+    // }
+    100% {
+      transform: translate3d(10px, 0px, 0px) rotate(360deg);
+    }
+  }
+  
