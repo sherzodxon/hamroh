@@ -25,7 +25,7 @@ const AudioPlayer = () => {
    } = useSelector((state) => state.audio);
    let currAudio = useRef();
 
-   // const refAudio = useRef(currAudio); style={{ display: isOpen ? "block" : "none" }}
+
 
    useEffect(() => {
       if (isPlaying) {
@@ -86,7 +86,7 @@ const AudioPlayer = () => {
                      {currentPlayingAudio.ayahName}
                   </p>{" "}
                   {/* &nbsp; -- &nbsp; */}
-                  <span>
+                  <span className="audio__span">
                      [ {currentPlayingAudio.surahNumber} :{" "}
                      {currentPlayingAudio.ayahNumber} ]
                   </span>

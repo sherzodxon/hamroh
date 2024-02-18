@@ -17,14 +17,17 @@
    
 }
 .oyat-card__number{
-    font-size: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    font-size: 1.6rem;
     font-weight: 500;
-    background-color: #009959;
     border-radius: 50%;
-   width: 30px;
-   height: 30px;
-   text-align: center;
+    background-color: #009959;
    color: #fff;
+   font-family: 'Roboto Slab';
 }
 
 .oyat-card__text{
@@ -37,7 +40,7 @@
     font-family: 'Noto Naskh Arabic';
     text-align: right;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 4rem;
     
 }
 .oyat-list__list{
@@ -45,4 +48,9 @@
 }
 .oyat-card__audio-button{
     background: transparent;
+    justify-self: end;
+    &:focus{
+       border: none;
+       outline: none;
+    }
 }
