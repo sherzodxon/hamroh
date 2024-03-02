@@ -24,7 +24,7 @@ function AyahCard({
         (state) => state.audio
      );
      const isCurrPlaying = isPlaying && currentAudio.url === audioUrl;
-
+     
     return (
         <li style={isCurrPlaying?{background:"#83ebc080"}:{background:"#fff"}}  className='oyat-card'>
              <div className="oyat-card__wrapper">

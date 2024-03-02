@@ -79,17 +79,25 @@ try {
         country: response.data.countryName,
         state: response.data.city,
         city: response.data.locality,
-        timezone: response.data.localityInfo.informative[1].name
+        timezone: response.data.localityInfo.informative[2]?.name || response.data.localityInfo.informative[1]?.name
     }
 } catch (error) {
     return{
         country:error.message,
         state:error.message,
         city:error.message,
-
+        timezone:error.message
     }
 }
 
+}
+const getCalendar = async(country,city,date)=>{
+    try {
+        const response = await axios.get(`https://api.aladhan.com/v1/calendarByCity?city=${city}&country=${country}&method=1&month=${date.split("-")[1]}&year=${date.split("-")[0]}`)
+        return response.data.data
+    } catch (error) {
+        
+    }
 }
 const getNames = async (url) => {
     try {
@@ -150,5 +158,6 @@ export {
     nameLiked,
     getSurahs,
     oneSurah,
-    getAudio
+    getAudio,
+    getCalendar
 }

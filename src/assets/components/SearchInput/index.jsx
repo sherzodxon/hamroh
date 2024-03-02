@@ -1,12 +1,12 @@
 import { Input } from 'antd'
-import React from 'react'
+import React, { forwardRef } from 'react'
 
-function SearchInput({maxWidth,onChange,placeholder="Qidirish",type="text"}) {
+const SearchInput=forwardRef(function(props,ref) {
     return (
-     <div className="search-input" style={{maxWidth:maxWidth}}>
-        <Input  onChange={onChange} placeholder={placeholder} type={type}/>
+     <div className="search-input" style={{maxWidth:props.maxWidth}}>
+        <Input ref={ref} onChange={props.onChange} placeholder={props.placeholder} type={props.type}/>
      </div>
     )
-}
+})
 
 export default SearchInput

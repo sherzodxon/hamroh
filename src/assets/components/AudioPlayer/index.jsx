@@ -12,6 +12,7 @@ import {
    setPlaylist,
 } from "../../../features/ayahs/audioSlice";
 import { PlaylistsContext } from "../../../contexts/audioContext";
+import { Link } from "react-router-dom";
 
 const AudioPlayer = () => {
    const { playlist } = useContext(PlaylistsContext);
@@ -82,9 +83,9 @@ const AudioPlayer = () => {
                         alt="sd"
                      />
                   </button>
-                  <p className="audio__ayahname">
+                  <Link to={`suralar/${currentPlayingAudio.surahNumber}`} className="audio__ayahname">
                      {currentPlayingAudio.ayahName}
-                  </p>{" "}
+                  </Link>{" "}
                   {/* &nbsp; -- &nbsp; */}
                   <span className="audio__span">
                      [ {currentPlayingAudio.surahNumber} :{" "}

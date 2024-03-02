@@ -30,14 +30,6 @@ export let sidebarRoutes=[
      
     },
     {
-        id:4,
-        to:"/zikr",
-        title:"Zikr",
-        active:false,
-        image:zikr,
-      
-    },
-    {
         id:5,
         to:"/kalendar",
         title:"Oylik-taqvim",

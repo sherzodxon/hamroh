@@ -26,7 +26,35 @@ export function addMinutesToTime(inputTime) {
         i="0" + i; 
     } 
     return i; } 
-
+  export  const debounce = (mainFunction, delay) => {
+    let timer;
+    return function (...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        mainFunction(...args);
+      }, delay);
+    };
+  };
+  export  const weekNameTranslator=(name)=>{
+    switch (name) {
+        case "Monday":
+            return "Dushanba"
+        case "Tuesday":
+            return "Seshanba"
+        case "Wednesday":
+            return "Chorshanba"
+        case "Thursday":
+            return "Payshanba"
+        case "Friday":
+            return "Juma"
+        case "Sunday":
+            return "Yakshanba"
+        case "Saturday":
+            return "Shanba"
+        default:
+            break;
+    }
+}
     export const residualSurahs=[
       {
         id:101,

@@ -13,11 +13,6 @@ export const routes = [{
         element: < Homepage />
     },
     {
-        id: 2,
-        path: "/zikr",
-        element: < Mention />
-    },
-    {
         id: 3,
         path: "/qur'on",
         element: < Book />
