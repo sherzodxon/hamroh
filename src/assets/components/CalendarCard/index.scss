@@ -1,8 +1,9 @@
 .calendar-card {
-    width: 400px;
+    width:370px;
     border-radius: 1rem;
     border: 1px solid #F4F4F4;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+   
 }
 .calendar-card__head {
     display: flex;
@@ -54,12 +55,25 @@
     border-radius: 50%;
 }
 .calendar-card__active{
-    width: 400px;
+    width: 370px;
     border-radius: 1rem;
-    border: 1px solid #F4F4F4;
-    margin-bottom: 1rem;
+    border: 1px solid #d1d1d1;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 30px #d6d6d6;
+    .calendar-card__head{
+        border-bottom: 1px solid #d1d1d1;
+    }
+    .calendar-card__item{
+        border-right: 1px solid #d1d1d1;
+        &:last-child{
+            border-right: none;
+        }
+    }
     .calendar-card__number{
         background-color: #009959;
         color: #F4F4F4;
+    }
+    .calendar-card__day-name{
+        color: #009959;
     }
 }

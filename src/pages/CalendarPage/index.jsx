@@ -1,5 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
-import {useQuery} from 'react-query';
+import React, {useEffect, useState} from 'react'
 import {getCalendar} from '../../boot/axios';
 import {useCurrentZone} from '../../contexts/context';
 import PageControl from '../../assets/components/PageControl';
@@ -8,7 +7,7 @@ import {Input} from 'antd';
 import './index.scss'
 import HomeSpinner from '../../assets/components/section/Spinner/HomeSpinner';
 import CalendarList from '../../assets/components/section/CalendarList';
-import { checkTime } from '../../boot/functions';
+import { checkTime, monthNameTranslator } from '../../boot/functions';
 
 function Calendar() {
     const time = new Date();
@@ -38,7 +37,7 @@ function Calendar() {
             <div className="calendar__container container">
                 <div className="book__header">
                     <PageControl next="/xarita"/>
-                    <Title text={data[0]?.date.gregorian.month.en || "Oylik taqvim"}/>
+                    <Title text={monthNameTranslator(data[0]?.date.gregorian.month.en) || "Oylik taqvim"}/>
                     <div className="book__search-wrapper">
                         <Input defaultValue={date} onChange={(e)=>setDate(e.target.value)}  type='month'/>
                     </div>

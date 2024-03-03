@@ -55,6 +55,48 @@ export function addMinutesToTime(inputTime) {
             break;
     }
 }
+export function isToday(dateString) {
+    // Create a new Date object from the input string
+    const inputDate = new Date(dateString);
+    
+    // Get today's date
+    const today = new Date();
+    
+    // Check if the input date matches today's date
+    return inputDate.getDate() === today.getDate() &&
+           inputDate.getMonth() === today.getMonth() &&
+           inputDate.getFullYear() === today.getFullYear();
+}
+export const monthNameTranslator = (month) => {
+    switch (month) {
+        case "January":
+            return "Yanvar"
+        case "February":
+            return "Fevral"
+        case "March":
+            return "Mart";
+        case "April":
+            return "Aprel"
+        case "May":
+            return "May"
+        case "June":
+            return "Iyun"
+        case "July":
+            return "Iyul"
+        case "August":
+            return "Avgust"
+        case "September":
+            return "Sentyabr"
+        case "October":
+            return "Oktyabr"
+        case "November":
+            return "Noyabr"
+        case "Decebmer":
+            return "Dekabr"
+        default:
+            break;
+    }
+}
     export const residualSurahs=[
       {
         id:101,

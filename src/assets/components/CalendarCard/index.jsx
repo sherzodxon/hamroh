@@ -2,7 +2,7 @@ import React from 'react';
 import './index.scss'
 import { addMinutesToTime, weekNameTranslator } from '../../../boot/functions';
 const CalendarCard = ({active,readable,weekday,fajr,dhuhr,asr,maghrib,isha}) => {
-
+ 
     return (
         <div className={active?'calendar-card__active':"calendar-card"}>
             <div className="calendar-card__head">
