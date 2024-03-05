@@ -4,6 +4,7 @@ import './index.scss'
 import { isToday } from '../../../../boot/functions';
  
 const CalendarList = ({data}) => {
+    //console.log(isToday(data[3].date.gregorian.date));
     return (
         <ul className='calendar-list'>
             {

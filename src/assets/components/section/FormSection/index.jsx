@@ -19,6 +19,8 @@ const [cityChange,setCityChange]=useState(true)
 const [stateList, setStateList] = useState([]);
 const [cityList, setCityList] = useState([]);
 const [country,setCountry]=useState("");
+const [latitude,setLatitude]=useState(0);
+const [longitude,setLongitude]=useState(0)
 const [stateLoader,setStateLoader]=useState(false);
 const [cityLoader,setCityLoader]=useState(false)
 const [state,setState]=useState("");
@@ -35,7 +37,9 @@ const data={
 country:country,
 state:state,
 city:city,
-timezone:timezone
+timezone:timezone,
+latitude:latitude,
+longitude:longitude
 }
 setCurrentZone(data)
 }
@@ -47,7 +51,9 @@ return (
         <Select placeholder="Davlat" onChange={(value)=> {
             const country = countryList[value]; //here you will get full country object.
             setCountryid(country.id);
-            setCountry(country.name)
+            setCountry(country.name);
+            setLatitude(country.latitude);
+            setLongitude(country.longitude);
             setTimezone(`${country.region}/${country.capital}`);
             setStateLoader(true)
             GetState(country.id).then((result) => {
@@ -89,7 +95,7 @@ return (
             ))}
         </Select>
     </Form.Item>
-    <InputSpinner display={stateLoader}/>
+    <InputSpinner display={stateLoader} className="form__input-spinner"/>
     </div>
     <div className="form__input-wrapper">
     <Form.Item style={{minWidth:200}} name="city" >
@@ -104,7 +110,7 @@ return (
             ))}
         </Select>
     </Form.Item>
-    <InputSpinner display={cityLoader}/>
+    <InputSpinner display={cityLoader} className="form__input-spinner"/>
     </div>
     <Form.Item>
         <Button htmlType='submit' key="submit" className='form__button' type='dashed' >{buttonTitle}</Button>

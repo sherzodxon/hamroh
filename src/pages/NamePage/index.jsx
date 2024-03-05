@@ -8,6 +8,7 @@ import PageControl from '../../assets/components/PageControl'
 import './index.scss'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import Title from '../../assets/components/Title'
 
 function NamePage() {
     const {id}=useParams()
@@ -22,11 +23,11 @@ function NamePage() {
 <div className="name">
     <div className="name__container container">
         <div className="name__header">
-            <PageControl next="/ismlar"/>
+            <PageControl next={`/ismlar/${+id+1}`}/>
         </div>
         {
             data? <div className="name__body">
-            <h2 className='name__title'>{data.name}</h2>
+            <Title text={data.name}/>
             <p className='name__text'>{data.comment}</p>
         </div>:<HomeSpinner/>
         }

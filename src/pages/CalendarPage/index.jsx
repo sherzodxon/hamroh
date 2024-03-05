@@ -35,7 +35,7 @@ function Calendar() {
     return (
         <div className="calendar">
             <div className="calendar__container container">
-                <div className="book__header">
+                <div className="calendar__header">
                     <PageControl next="/xarita"/>
                     <Title text={monthNameTranslator(data[0]?.date.gregorian.month.en) || "Oylik taqvim"}/>
                     <div className="book__search-wrapper">

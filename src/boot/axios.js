@@ -79,7 +79,9 @@ try {
         country: response.data.countryName,
         state: response.data.city,
         city: response.data.locality,
-        timezone: response.data.localityInfo.informative[2]?.name || response.data.localityInfo.informative[1]?.name
+        timezone: response.data.localityInfo.informative[2]?.name || response.data.localityInfo.informative[1]?.name,
+        latitude:latitude,
+        longitude:longitude,
     }
 } catch (error) {
     return{

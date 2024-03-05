@@ -56,16 +56,18 @@ export function addMinutesToTime(inputTime) {
     }
 }
 export function isToday(dateString) {
-    // Create a new Date object from the input string
-    const inputDate = new Date(dateString);
-    
-    // Get today's date
+    const inputDate = dateString.split("-");
+   
     const today = new Date();
+    const day=checkTime(today.getDate());
+    const month=checkTime(today.getMonth()+1);
+    const year=`${today.getFullYear()}`
     
-    // Check if the input date matches today's date
-    return inputDate.getDate() === today.getDate() &&
-           inputDate.getMonth() === today.getMonth() &&
-           inputDate.getFullYear() === today.getFullYear();
+    if (inputDate[0]==day && inputDate[1]==month && inputDate[2]==year) {
+        return true
+    }
+    else return false
+    
 }
 export const monthNameTranslator = (month) => {
     switch (month) {

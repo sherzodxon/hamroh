@@ -51,7 +51,7 @@ function Book() {
                     <PageControl next="/kalendar"/>
                     <Title text="Suralar"/>
                    <div className="book__search-wrapper">
-                    <InputSpinner display={search}/>
+                    <InputSpinner display={search} className="book__spinner"/>
                    <SearchInput
                         ref={searchRef}
                         onChange={handleChange}
