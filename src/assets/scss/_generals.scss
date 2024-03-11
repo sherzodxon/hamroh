@@ -52,7 +52,7 @@ ol {
 
 .app__main {
   display: flex;
-  margin-top: 80px;
+  margin-top: 8rem;
 }
 
 .app__body{
@@ -69,13 +69,13 @@ overflow: hidden;
   position: relative;
   border-radius: 10px;
   background: #FFF;
-  margin: 17px;
+  margin: 1.5rem;
   height: calc(100vh - 120px);
   overflow-y: scroll;
   max-height: 1200px;
   padding: 15px 30px;
   padding-bottom: 0;
-  margin-top: 10px;
+  margin-top: 1rem;
   width: auto;
   &::-webkit-scrollbar {
     width: 5px;
@@ -123,39 +123,38 @@ button{
     outline: none;
   }
 }
-
-@media only screen and (max-width:800px) {
-  body {
-    max-width: 500px;
+@media only screen and (max-width:950px){
+  html{
+    font-size: 50%;
   }
-
-  .input {
-    width: 30%;
-    color: #FFFFFF;
-
-    &::placeholder {
-      color: #fefefe;
-    }
+  .app__body{
+    margin-top: 1.5rem;
   }
-
-
-
-  .background {
-    display: none
-  }
-
-  .main {
-    position: static;
-    height: auto;
-    width: 100%;
+  .container{
+    height: calc(100vh - 105px);
   }
 }
-
-@media only screen and (max-height:500px) {
-  .list-container {
-    display: none;
+@media only screen and (max-width:650px){
+  body{
+    background-image: none;
   }
+.app__main{
+  margin-top: 0.5rem;
+  flex-direction: column-reverse;
+  //align-items: center;
 }
+.app__body{
+  margin-top: 0;
+}
+
+.container{
+  margin: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: calc(100vh - 8.9rem);
+}
+}
+
 
 button {
   border: none;

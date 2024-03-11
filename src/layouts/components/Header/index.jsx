@@ -1,8 +1,10 @@
 import React from 'react'
 import './index.scss'
 import { useCurrentZone } from '../../../contexts/context'
+import { useSelector } from 'react-redux'
 function Header() {
  const {currentZone}=useCurrentZone()
+ 
 
     return (
         <div className="header">
