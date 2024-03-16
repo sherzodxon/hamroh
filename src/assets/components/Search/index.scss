@@ -18,18 +18,17 @@
     width: 4rem;
     height: 4rem;
     display: block;
-    background: #009959;
+    background-color: #009959;
     border-radius: 50%;
-    position: relative;
-
-    &::after {
-        width: 3rem;
-        height: 3rem;
-        position: absolute;
-        content: '';
-        top: 5px;
-        left: 6px;
-    }
+    background-repeat: no-repeat;
+        background-size: 80%;
+        margin-top: 15px;
+        background-position: center center;
+        @media only screen and (max-width:650px){
+            background-color: #ffffff33;
+            margin: 0;
+        }
+    
 }
 .search{
     //margin-left: auto;
@@ -41,18 +40,14 @@
 
 .search__button {
     @include button();
-    margin-top: 15px;
-    &::after {
-        background: url(../../img//search-button.svg);
-    }
+        background-image: url(../../img//search-button.svg);
+        
 }
 .search__button--close{
     @include button();
-   margin-top: 15px;
-    &::after {
-        background: url(../../img//x.svg) no-repeat center center;
-        left: 5px;
-    }
+   background-image: url(../../img//x.svg);
+      
+    
 }
 .search__wrapper{
     position: absolute;
@@ -71,4 +66,14 @@
     
     animation-name: search-active;
     animation-duration: 200ms;
+}
+@media only screen and (max-width:650px) {
+    @mixin button{
+        background-color: #ffffff33;
+        margin: 0;
+    }
+    .search__button{ 
+        background-image: url(../../img/search-tab.svg);
+    }
+    
 }

@@ -1,0 +1,52 @@
+.draggable-item {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: rgb(255, 255, 255,0.7);
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+    text-align: left;
+    padding: 1.5rem 3rem;
+     margin: 1rem ;
+     border-radius: 8px;
+}
+.draggable-item__fajr{
+    &:nth-child(1){
+        background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+        color: #fff;
+    }
+}
+.draggable-item__sunrise{
+    &:nth-child(2){
+        background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+        color: #fff;
+    }
+}
+.draggable-item__dhuhr{
+    &:nth-child(3){
+        background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+        color: #fff;
+    }
+}
+.draggable-item__asr{
+    &:nth-child(4){
+        background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+        color: #fff;
+    }
+}
+.draggable-item__maghrib{
+    &:nth-child(5){
+        background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+        color: #fff;
+    }
+}
+.draggable-item__isha{
+    &:nth-child(6){
+        background: linear-gradient(180deg, rgba(180, 180, 180, 0.15) 0%, rgba(220, 220, 220, 0.04) 48.21%, rgba(233, 233, 233, 0.06) 100%);
+        color: #fff;
+    }
+}

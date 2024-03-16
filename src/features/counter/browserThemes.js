@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const browserThemesSlice = createSlice({
   name: 'themes', 
   initialState: {
-    containerClassName:"night-container",
+    containerClassName:"isha",
     tablet:false,
     mobile:false
   },

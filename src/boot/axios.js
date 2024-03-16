@@ -17,6 +17,10 @@ const getTimings = async (params) => {
             const data = await response.data.data.timings;
             return {
                 timezone: response.data.data.meta.timezone,
+                date:{
+                 gregorianDate:response.data.data.date.gregorian.date,
+                 hujriDate:response.data.data.date.hijri.date,
+                },
                 timings: [{
                         id: 1,
                         name: "Bomdod",

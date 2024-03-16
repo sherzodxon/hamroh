@@ -1,0 +1,59 @@
+.draggable{
+  padding: 1rem 0;
+  position: absolute;
+  bottom: 0;
+  width: 101%;
+  max-height: 250px;
+  min-height: 50px;
+  border-radius: 4.4rem  4.4rem 0 0;
+  overflow: hidden;
+  z-index: 99 ;
+}
+.draggable__list{
+ 
+  flex-grow: 1;
+ max-height: 170px;
+ padding-top: 2rem;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    
+}
+&::-webkit-scrollbar-thumb {
+  border-radius: 90px;
+  padding-right: 2px;
+  background-color: rgba(214, 214, 214, 0.1);
+}
+
+}
+.draggable__button{
+  display: block;
+  width:46px;
+  height: 5px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+.draggable__fajr{
+  background: linear-gradient(180deg, rgba(2, 2, 16) 0%, rgba(20, 20, 33) 32.14%, rgba(41, 39, 71) 91.61%);
+}
+.draggable__sunrise{
+    background: linear-gradient(180deg, rgba(27, 64, 159, 0.81) 10%, rgba(34, 70, 160, 0.82)36.26%, rgba(6, 38, 74, 0.72) 91.61%);
+ }
+ .draggable__dhuhr{
+  background: linear-gradient(180deg, rgb(46, 65, 119) 0%, rgb(78, 109, 189) 36.26%, rgb(53, 125, 207) 91.61%);
+
+ }
+ .draggable__asr{
+    background: linear-gradient(180deg, rgb(73, 73, 139) 1%, rgb(61, 61, 143) 32.14%, rgb(71, 68, 122) 91.61%);
+    
+ }
+ .draggable__maghrib{
+  background: linear-gradient(180deg, rgb(108, 32, 97) 0%, #954057 51.19%, #C53B85 100%);
+}
+.draggable__isha{
+  background: linear-gradient(180deg, rgb(40, 44, 102) 4.36%, rgb(32, 30, 80) 46.5%, rgb(54, 40, 107) 91.61%);
+
+}
+
+ 

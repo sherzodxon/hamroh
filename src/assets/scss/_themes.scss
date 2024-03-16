@@ -2,53 +2,53 @@
     background: linear-gradient(180deg, #110E2D 0%, #28214D 49.48%, #2E2755 100%);
 
     &::after {
-        background: url(../img/bacgr-fajr.png) no-repeat center bottom;
+        background: url("../img/bacgr-fajr.png") no-repeat center bottom;
         background-size: contain;
     }
     &::before {
-        background: url(../img/fajr-after.png) no-repeat center center;
+        background: url("../img/fajr-after.png") no-repeat center center;
         background-size: contain;
         left: 60px;
         top: 100px;
     }
 }
-.sunrise-item{
+.sunrise-item {
     background: linear-gradient(180deg, #5995de 0%, #aac1fc 61.37%, #4D6BB8 100%);
 
     &::after {
-        background: url(../img/dhuhr-bg.png) no-repeat center bottom;
+        background: url("../img/dhuhr-bg.png") no-repeat center bottom;
         background-size: contain;
     }
     &::before {
-        background: url(../img/sun.png) no-repeat center center;
+        background: url("../img/sun.png") no-repeat center center;
         background-size: contain;
         left: 10px;
         top: 150px;
     }
 }
-.dhuhr-item{
+.dhuhr-item {
     background: linear-gradient(180deg, #88BFFF 0%, #BFD1FF 44.79%, #4D6BB8 100%);
     &::after {
-        background: url(../img/dhuhr-bg.png) no-repeat center bottom;
+        background: url("../img/dhuhr-bg.png") no-repeat center bottom;
         background-size: contain;
     }
     &::before {
-        background: url(../img/sun.png) no-repeat center center;
+        background: url("../img/sun.png") no-repeat center center;
         background-size: contain;
-        left: 00px;
-        top: 0px;
-    
+        left: 0;
+        top: 0;
+
     }
 }
-.asr-item{
+.asr-item {
     background: linear-gradient(180deg, #8F8CFF 0%, #B8F1FF 45.48%, #B8EEFA 100%);
-    
+
     &::after {
-        background: url(../img/dhuhr-bg.png) no-repeat center bottom;
+        background: url("../img/dhuhr-bg.png") no-repeat center bottom;
         background-size: contain;
     }
     &::before {
-        background: url(../img/sun.png) no-repeat center center;
+        background: url("../img/sun.png") no-repeat center center;
         background-size: contain;
         left: 30px;
         bottom: 100px;
@@ -58,11 +58,11 @@
     background: linear-gradient(180deg, #8F2681 0%, #CB4F71 61.37%, #C53B85 100%);
 
     &::after {
-        background: url(../img/magh-bcg.png) no-repeat center bottom;
+        background: url("../img/magh-bcg.png") no-repeat center bottom;
         background-size: contain;
     }
     &::before {
-        background: url(../img/maghr-vector.png) no-repeat center center;
+        background: url("../img/maghr-vector.png") no-repeat center center;
         background-size: contain;
         right: 30%;
         top: 70px;
@@ -71,29 +71,32 @@
 
 .isha-item {
     background: linear-gradient(180deg, #6B4CAA 0%, #B09ECB 51.19%, #D6D3E4 100%);
-    
+
     &::after {
-        background: url(../img/isha-bg.png) no-repeat center bottom;
+        background: url("../img/isha-bg.png") no-repeat center bottom;
         background-size: contain;
         opacity: 0.8;
     }
 
     &::before {
-        background: url(../img/fajr-after.png) no-repeat center center;
+        background: url("../img/fajr-after.png") no-repeat center center;
         background-size: contain;
         left: 20px;
         top: 50px;
     }
 
 }
-.bomdod{
-    &:first-child{
+
+
+// destkopdagi swiper aktiv slidelari
+.fajr__slide {
+    &:first-child {
         height: 350px;
         max-width: 310px;
         box-shadow: 0 30px 50px rgba(0, 0, 0, 0.618), 0 45px 26px rgba(0, 0, 0, 0.624);
     }
 }
-.quyosh {
+.sunrise__slide {
     &:nth-child(2) {
         box-shadow: 0 30px 50px rgba(0, 0, 0, 0.618), 0 45px 26px rgba(0, 0, 0, 0.624);
         height: 350px;
@@ -101,7 +104,7 @@
     }
 }
 
-.peshin {
+.dhuhr__slide {
     &:nth-child(3) {
         height: 350px;
         max-width: 310px;
@@ -109,7 +112,7 @@
     }
 }
 
-.asr {
+.asr__slide {
     &:nth-child(4) {
         height: 350px;
         max-width: 310px;
@@ -117,7 +120,7 @@
     }
 }
 
-.shom {
+.maghrib__slide {
     &:nth-child(5) {
         height: 350px;
         max-width: 310px;
@@ -125,228 +128,296 @@
     }
 }
 
-.hufton {
+.isha__slide {
     &:nth-child(6) {
         height: 350px;
         max-width: 310px;
         box-shadow: 0 30px 50px rgba(0, 0, 0, 0.618), 0 45px 26px rgba(0, 0, 0, 0.624);
     }
 }
-@media only screen and (max-width:870px){
-    .night-container{
-        background: linear-gradient(180deg, rgb(1, 1, 16) 0%, rgba(16, 16, 33) 32.14%, rgba(35, 30, 71) 91.61%);
-    }
+@media only screen and (max-width:650px) {
+    //bomdod
     .fajr-container {
-        background: linear-gradient(180deg, rgba(2, 2, 16) 0%, rgba(20, 20, 33) 32.14%, rgba(41, 39, 71) 91.61%);
+        background: linear-gradient(180deg, rgba(2, 2, 16) 0%, rgb(50, 50, 69) 32.14%, rgb(0, 0, 0) 91.61%);
     }
+    .fajr-time {
+       &::after {
+            width: 15rem;
+            height: 15rem;
+            position: absolute;
+            content: '';
+            background: url("../img/fajr-after.png") no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            right: 10%;
+            top: 5%;
+        }
+        &::before {
+            width: 60%;
+            height: 40%;
+            position: absolute;
+            content: '';
+            background: url(../img/maghr-vector.png) no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            right: 10%;
+            top: 0%;
+        }
+    }
+
+    .fajr-timings {
+        background: url("../img/bacgr-fajr.png") no-repeat center calc(45%);
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            width: 60%;
+            height: 40%;
+            position: absolute;
+            content: '';
+            background: url("../img/fajr-stars.png") no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            right: 20%;
+            top: 1%;
+        }
+    }
+    //quyosh
     .sunrise-container {
-        background: linear-gradient(180deg, #4b95ea 0%, #9bb1ee 44.79%, #a5b6e1 100%);
-            
+        background: linear-gradient(180deg, rgba(11, 14, 181, 0.829) 0%, rgb(141, 164, 229) 54.79%, rgb(68, 108, 206) 100%);
+
     }
-    
-    // .fajr-time {
-    //     background: linear-gradient(180deg, rgb(16, 13, 44) 0%, #28214D 44.79%, #2E2755 100%);
-    
-    //     &::after {
-    //         width: 60%;
-    //         height: 40%;
-    //         position: absolute;
-    //         content: '';
-    //         background: url(../img/fajr-after.png) no-repeat center center;
-    //         background-size: contain;
-    //         z-index: 0;
-    //         right: 20%;
-    //         top: 25%;
-    //     }
-    // }
-    
-    // .fajr-timings {
-    //     background: url(../img/bacgr-fajr.png) no-repeat center calc(45%);
-    //     background-size: contain;
-    //     position: relative;
-    //     z-index: 1;
-    
-    //     &::after {
-    //         width: 60%;
-    //         height: 40%;
-    //         position: absolute;
-    //         content: '';
-    //         background: url(../img/fajr-stars.png) no-repeat center center;
-    //         background-size: contain;
-    //         z-index: 0;
-    //         right: 20%;
-    //         top: 8%;
-    //     }
-    // }
-    
-    // .dhuhr-time {
-    //     background: linear-gradient(180deg, #88BFFF 0%, #BFD1FF 44.79%, #4D6BB8 100%);
-    //     position: relative;
-    //     overflow: hidden;
-    
-    //     &::after {
-    //         width: 247px;
-    //         height: 247px;
-    //         position: absolute;
-    //         content: '';
-    //         background: url(../img/sun.png) no-repeat center center;
-    //         background-size: contain;
-    //         z-index: 0;
-    //         left: -100px;
-    //         top: 12%;
-    
-    //     }
-    // }
-    
-    // .dhuhr-timings {
-    //     background: url(../img/dhuhr-bg.png) no-repeat center calc(45%);
-    //     background-size: contain;
-    //     position: relative;
-    //     z-index: 1;
-    
-    //     &::after {
-    //         width: 60%;
-    //         height: 40%;
-    //         position: absolute;
-    //         content: '';
-    //         background: url(../img/maghr-vector.png) no-repeat center center;
-    //         background-size: contain;
-    //         z-index: 0;
-    //         right: 10%;
-    //         top: 8%;
-    //     }
-    // }
-    
+
+    .sunrise-time {
+        position: relative;
+
+        &::before {
+            width: 100%;
+            content: '';
+            position: absolute;
+            height: 60%;
+            bottom: 18%;
+            background: url("../img/dhuhr-bg.png") no-repeat center bottom;
+            background-size: cover;
+            z-index: 1;
+        }
+        &::after {
+            width: 12rem;
+            height: 12rem;
+            position: absolute;
+            content: '';
+            background: url("../img/sun.png") no-repeat center center;
+            right: 20%;
+            background-size: contain;
+            bottom: 45%;
+        }
+    }
+    .sunrise-timings {
+        &::after {
+            width: 60%;
+            height: 40%;
+            position: absolute;
+            content: '';
+            background: url("../img/maghr-vector.png") no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            right: 10%;
+            top: 8%;
+        }
+    }
+    //peshin
     .dhuhr-container {
-        background: linear-gradient(180deg, #4b95ea 0%, #7691dc 44.79%, #4D6BB8 100%);
+        background: linear-gradient(180deg, #4b95ea 0%, #a8b9e7 44.79%, #4468c4 100%);
     }
-    
-    // .asr-time {
-    //     background: linear-gradient(180deg, rgb(143, 38, 129) 0%, #CB4F71 51.19%, #C53B85 100%);
-    //     background: linear-gradient(180deg, #8F8CFF 0%, #B8F1FF 45.48%, #B8EEFA 100%);
-    
-    //     &::after {
-    //         width: 290px;
-    //         height: 290px;
-    //         position: absolute;
-    //         content: '';
-    //         background: url(../img/sun.png) no-repeat center center;
-    //         background-size: cover;
-    //         z-index: 0;
-    //         right: calc(50% - 195px);
-    //         top: 25%;
-    //     }
-    // }
-    
-    // .asr-timings {
-    //     background: url(../img/asr-bg.png) no-repeat center calc(45%);
-    //     background-size: contain;
-    //     position: relative;
-    //     z-index: 1;
-    
-    //     &::after {
-    //         width: 35%;
-    //         height: 30%;
-    //         position: absolute;
-    //         content: '';
-    //         background: url(../img/maghr-vector.png) no-repeat center center;
-    //         background-size: contain;
-    //         z-index: 0;
-    //         right: 30%;
-    //         top: 12%;
-    //     }
-    // }
-    
+    .dhuhr-time {
+        // background: linear-gradient(180deg, #88BFFF 0%, #BFD1FF 44.79%, #4D6BB8 100%);
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            width: 28rem;
+            height: 28rem;
+            position: absolute;
+            content: '';
+            background: url("../img/sun.png") no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            right: 10%;
+            top: 8%;
+
+        }
+    }
+
+    .dhuhr-timings {
+        background: url("../img/dhuhr-bg.png") no-repeat center calc(45%);
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            width: 60%;
+            height: 40%;
+            position: absolute;
+            content: '';
+            background: url("../img/maghr-vector.png") no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            left: 3%;
+            top: 10%;
+        }
+    }
+    //asr
     .asr-container {
-        z-index: 6;
-        background: linear-gradient(180deg, rgb(143, 38, 129) 0%, #CB4F71 51.19%, #C53B85 100%);
-        background: linear-gradient(180deg, #575595 0%, #3d4e52 45.48%, #2d393b 100%);
-    
+        background: linear-gradient(180deg, #8F8CFF 0%, #bfeef9 45.48%, rgba(2, 66, 144, 0.952) 100%);
+        &::after {
+            width: 45%;
+            height: 40%;
+            position: absolute;
+            content: '';
+            background: url("../img/maghr-vector.png") no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            right: 40%;
+            top: 2%;
+            pointer-events: none;
+        }
     }
-    
-    // .maghrib-time {
-    //     background: linear-gradient(180deg, rgb(143, 38, 129) 0%, #CB4F71 51.19%, #C53B85 100%);
-    //     position: relative;
-    //     overflow: hidden;
-    
-    //     &::after {
-    //         width: 591px;
-    //         height: 591px;
-    //         position: absolute;
-    //         content: '';
-    //         background: url(../img/maghr-after.png) no-repeat center center;
-    //         background-size: contain;
-    //         z-index: 0;
-    //         right: 0%;
-    //         top: 18%;
-    //     }
-    // }
-    
-    // .maghrib-timings {
-    //     background: url(../img/magh-bcg.png) no-repeat center calc(45%);
-    //     background-size: contain;
-    //     position: relative;
-    //     z-index: 1;
-    
-    //     &::after {
-    //         width: 35%;
-    //         height: 30%;
-    //         position: absolute;
-    //         content: '';
-    //         background: url(../img/maghr-vector.png) no-repeat center center;
-    //         background-size: contain;
-    //         z-index: 0;
-    //         right: 30%;
-    //         top: 12%;
-    //     }
-    // }
-    
+    .asr-timings {
+        position: relative;
+        &::after {
+            width: 35%;
+            height: 30%;
+            position: absolute;
+            content: '';
+            background: url("../img/maghr-vector.png") no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            right: 3%;
+            top: 8%;
+        }
+        &::before {
+            width: 100%;
+            height: 60%;
+            content: '';
+            position: absolute;
+            background: url("../img/asr-bg.png") no-repeat center;
+             background-size: cover;
+            bottom: 20%;
+            z-index: 0;
+        }
+    }
+
+    .asr-time {
+        //background: linear-gradient(180deg, rgb(143, 38, 129) 0%, #CB4F71 51.19%, #C53B85 100%);
+
+        &::after {
+            width: 29rem;
+            height: 29rem;
+            position: absolute;
+            content: '';
+            background: url("../img/sun.png") no-repeat center center;
+            background-size: cover;
+            z-index: 0;
+            right: 20%;
+            top: 25%;
+        }
+    }
+      //shom
     .maghrib-container {
         z-index: 6;
         background: linear-gradient(180deg, rgb(108, 32, 97) 0%, #954057 51.19%, #C53B85 100%);
+        background: linear-gradient(180deg, rgb(191, 38, 170) 0%, #CB4F71 25.19%, rgba(63, 43, 67, 0.85) 90%);
+
     }
-    
-    // .isha-time {
-    //     background: linear-gradient(180deg, #6B4CAA 0%, #B09ECB 51.19%, #D6D3E4 100%);
-    
-    //     &::after {
-    //         width: 251px;
-    //         height: 251px;
-    //         position: absolute;
-    //         content: '';
-    //         background: url(../img/fajr-after.png) no-repeat center center;
-    //         background-size: cover;
-    //         z-index: 0;
-    //         right: 12%;
-    //         top: 35%;
-    //     }
-    // }
-    
-    // .isha-timings {
-    //     background: url(../img/isha-bg.png) no-repeat center calc(45%);
-    //     background-size: contain;
-    //     position: relative;
-    //     z-index: 1;
-    
-    //     &::after {
-    //         width: 35%;
-    //         height: 30%;
-    //         position: absolute;
-    //         content: '';
-    //         background: url(../img/fajr-stars.png) no-repeat center center;
-    //         background-size: contain;
-    //         z-index: 0;
-    //         right: 30%;
-    //         top: 12%;
-    //     }
-    // }
+    .maghrib-time {
+        //background: linear-gradient(180deg, rgb(143, 38, 129) 0%, #CB4F71 51.19%, #C53B85 100%);
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        &::after {
+            width: 100%;
+            height: 79rem;
+            position: absolute;
+            content: '';
+            background: url("../img/maghr-after.png") no-repeat center center;
+            background-size: cover;
+            z-index: 0;
+            left: 0;
+            top: 0%;
+        }
+    }
+
+    .maghrib-timings {
+        background: url("../img/magh-bcg.png") no-repeat center calc(45%);
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+
+        &::after {
+            width: 35%;
+            height: 30%;
+            position: absolute;
+            content: '';
+            background: url("../img/maghr-vector.png") no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            right: 30%;
+            top: 2%;
+        }
+    }
+    //hufton
     
     .isha-container {
-        z-index: 6;
+        overflow-y: hidden;
         background: linear-gradient(180deg, #3f315d 0%, #413454 51.19%, #6d6391 100%);
-        overflow: hidden;
+
     }
-    // .fajr-item , .sunrise-item , .dhuhr-item, .asr-item, .maghrib-item , .isha-item{
-    //     background: transparent;
-    // }
+    .isha-time {
+        background: linear-gradient(180deg, #2a1556 0%, #7974dc 31.19%, #160f808b 100%);
+
+        &::after {
+            width: 251px;
+            height: 251px;
+            position: absolute;
+            content: '';
+            background: url("../img/fajr-after.png") no-repeat center center;
+            background-size: cover;
+            z-index: 0;
+            right: 2%;
+            top: 7%;
+        }
+    }
+
+    .isha-timings {
+        background: url("../img/isha-bg.png") no-repeat center calc(45%);
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            width: 35%;
+            height: 30%;
+            position: absolute;
+            content: '';
+            background: url("../img/fajr-stars.png") no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            left: 11%;
+            top: 2%;
+        }
+        
+        &::before {
+            width: 35%;
+            height: 30%;
+            position: absolute;
+            content: '';
+            background: url("../img/maghr-vector.png") no-repeat center center;
+            background-size: contain;
+            z-index: 0;
+            left: 10%;
+            top: 12%;
+        }
+    }
 }

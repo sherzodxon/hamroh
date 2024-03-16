@@ -1,3 +1,14 @@
 .timings__list{
-   margin-top: 10px;
+   margin-top: 1rem;
 }
+.timings__tablet{
+   position: absolute;
+   bottom: 0;
+   width:calc(100% - 0.5rem);
+   padding: 0;
+   //overflow: hidden;
+   height: auto;
+   //left: calc(50% - 0.5rem);
+}
+ 
+ 
