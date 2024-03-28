@@ -9,13 +9,13 @@ import {useSelector} from 'react-redux';
 import Draggable from '../Draggable';
 
 function Timings({data, activeClass}) {
-    const tablet = useSelector((state) => state.browserThemes.tablet);
+    const mobile= useSelector((state) => state.browserThemes.mobile);
     const browserClassname=useSelector((state)=>state.browserThemes.containerClassName)
     
     if (data.status) {
         return (<ErrorSection/>)
     }
-    if (tablet) {
+    if (mobile) {
         return (
          <section className="timings__tablet">
             <Draggable data={data} />

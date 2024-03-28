@@ -8,6 +8,7 @@ import './index.scss'
 import HomeSpinner from '../../assets/components/section/Spinner/HomeSpinner';
 import CalendarList from '../../assets/components/section/CalendarList';
 import { checkTime, monthNameTranslator } from '../../boot/functions';
+import SearchInput from '../../assets/components/SearchInput';
 
 function Calendar() {
     const time = new Date();
@@ -39,7 +40,7 @@ function Calendar() {
                     <PageControl next="/xarita"/>
                     <Title text={monthNameTranslator(data[0]?.date.gregorian.month.en) || "Oylik taqvim"}/>
                     <div className="book__search-wrapper">
-                        <Input defaultValue={date} onChange={(e)=>setDate(e.target.value)}  type='month'/>
+                        <SearchInput defaultValue={date} onChange={(e)=>setDate(e.target.value)}  type='month'/>
                     </div>
                 </div>
                 <div className="calendar__body">

@@ -5,10 +5,11 @@
     padding: 10px 0;
     max-width: 1920px;
     position: fixed;
-    z-index: 1;
+    z-index: 99;
     display: flex;
     top: 0;
     align-items: center;
+    backdrop-filter: blur(5px);
 }
 .header-logo-link{
     margin-left: 90px;

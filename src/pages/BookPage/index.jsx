@@ -55,7 +55,7 @@ function Book() {
                    <SearchInput
                         ref={searchRef}
                         onChange={handleChange}
-                        maxWidth={150}
+                        maxWidth={100}
                         placeholder='Suralarni qidirish'
                         type="search"/>
                    </div>

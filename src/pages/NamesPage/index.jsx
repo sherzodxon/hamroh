@@ -29,7 +29,7 @@ function Names() {
              <div className="names__header">
               <PageControl next="/qur'on"/>
               <Title text="Asmo al-Husna"/>
-              <button disabled={disabled} onClick={()=>setSelect(!select)} className={select?'names__page-button  names__page-button--active':'names__page-button'}>Tanlanganlar</button>
+              <button disabled={disabled} onClick={()=>setSelect(!select)} className={select?'names__page-button  names__page-button--active':'names__page-button'}><span>Tanlanganlar</span></button>
              </div>
              <div className="names__body">
                 {

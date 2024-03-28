@@ -14,7 +14,7 @@
 }
 .form__input-spinner{
     top: 9px;
-    right: -16px;
+    right: -18px;
 }
 .form{
     padding: 20px 25px;
@@ -30,5 +30,10 @@
         background: #fff;
         color: #009959 !important;
         border: 1px solid  #009959 !important;
+    }
+}
+@media only screen and (max-width:750px){
+    .form__input-spinner{
+        right: -20px;
     }
 }

@@ -77,3 +77,9 @@
         color: #009959;
     }
 }
+@media only screen and (max-width:870px){
+  .calendar-card, .calendar-card__active{
+    width: 100%;
+  }
+  
+}

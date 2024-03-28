@@ -18,8 +18,9 @@ function AppLayout() {
             <Route key={id} {...route} />
             ))}
             </Routes>
-            <AudioPlayer/>
+           
           </div>
+          <AudioPlayer/>
          </main>
         
         </>

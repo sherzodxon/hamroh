@@ -8,7 +8,7 @@ import './index.scss'
 import Search from '../../assets/components/Search';
 import HomeSpinner from '../../assets/components/section/Spinner/HomeSpinner';
 import {checkTime} from '../../boot/functions';
-import {editClassname, editMobile, editTablet} from '../../features/counter/browserThemes';
+import {editClassname, editMobile, editTablet} from '../../features/theme/browserThemes';
 
 function HomePage() {
     const today = new Date();
@@ -128,11 +128,11 @@ function HomePage() {
         }
     }, [second]);
 
-    if (tablet || mobile) {
+    if (mobile) {
         return (
             <section className='home'>
                 <div className={`container ${browserClassname}-container overflow-hidden-container` }>
-                  <div className={`${browserClassname}-time `}>
+                  <div className={`${browserClassname}-time home__date-time`}>
                   <div className={`${browserClassname}-timings tablet-timings`}>
                    <div className="home__tablet-head">
                     <button onClick={()=>window.location.reload()} className='home__reload-button'></button>

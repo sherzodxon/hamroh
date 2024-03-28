@@ -132,7 +132,7 @@ button{
   }
   .container{
     height: calc(100vh - 105px);
-    padding: 0.5rem;
+    padding: 1.5rem;
     padding-bottom: 0;
   }
   
@@ -144,27 +144,26 @@ button{
 .app__main{
   margin-top: 0.5rem;
   flex-direction: column-reverse;
-  //align-items: center;
 }
 .app__body{
   margin-top: 0;
 }
 .tablet-timings{
-  height: calc(100vh - 70px);
+  height: 100%;
   width: 100%;
   overflow: hidden;
 }
 .container{
   margin: 0.5rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-  height: calc(100vh - 8.9rem);
+  padding: 1rem;
+  height: calc(100vh - 8rem);
   position: relative;
-  //overflow: hidden;
+  
 }
 .overflow-hidden-container{
   overflow: hidden;
+  padding: 0;
+ 
 }
 }
 

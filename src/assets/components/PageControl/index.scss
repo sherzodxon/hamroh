@@ -10,6 +10,7 @@
     height: 3.5rem;
     border-radius: 50%;
     background: url(../../img//control.svg) no-repeat center center;
+    background-size: contain;
 }
 .page-control__button--next{
     transform: rotate(180deg); 

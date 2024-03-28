@@ -3,12 +3,12 @@
         bottom: -100px;
     }
     100%{
-        bottom: 8rem;
+        bottom: 0rem;
     }
 }
 @keyframes audio-close{
     0%{
-        bottom: 1rem;
+        bottom: 0rem;
     }
     100%{
         bottom: -100px;
@@ -17,23 +17,23 @@
 .audio{
     background: #009959;
     color: #fff;
-    position: sticky;
-    //width: 100%;
+    position: absolute;
+    width: calc(100% - 345px);
     margin: 17px;
-   // max-width: 1150px;
-    bottom: 8rem;
+    bottom: 0;
     border-radius: 3rem;
     padding: 1rem 2rem;
     z-index: 9;
+    right: 0;
     animation: audio-open ease 500ms;
 }
 .audio--closed{
     background: #009959;
     color: #fff;
     position: absolute;
-    width: 100%;
+    width: calc(100% - 345px);
     margin: 17px;
-   // max-width: 1150px;
+   right: 0;
     bottom: -100px;
     border-radius: 3rem;
     padding: 1rem 2rem;
