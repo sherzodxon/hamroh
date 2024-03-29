@@ -22,10 +22,8 @@
     border-radius: 50%;
     background-repeat: no-repeat;
         background-size: 80%;
-        margin-top: 15px;
         background-position: center center;
         @media only screen and (max-width:650px){
-            background-color: #ffffff33;
             margin: 0;
         }
     
@@ -41,6 +39,7 @@
 .search__button {
     @include button();
         background-image: url(../../img//search-button.svg);
+       // background-size: contain;
         
 }
 .search__button--close{

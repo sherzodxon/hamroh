@@ -13,6 +13,7 @@ function AppLayout() {
          <main className='app__main'>
          <Sidebar/>
           <div className="app__body">
+          <AudioPlayer/>
             <Routes>
             {routes.map(({ id, ...route }) => (
             <Route key={id} {...route} />
@@ -20,7 +21,7 @@ function AppLayout() {
             </Routes>
            
           </div>
-          <AudioPlayer/>
+         
          </main>
         
         </>

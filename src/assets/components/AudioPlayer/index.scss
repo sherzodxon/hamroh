@@ -1,40 +1,40 @@
 @keyframes audio-open{
     0%{
-        bottom: -100px;
+        margin-top: -55px;
+        
     }
     100%{
-        bottom: 0rem;
+        margin-top: 12px;
     }
 }
 @keyframes audio-close{
     0%{
-        bottom: 0rem;
+         margin-top: 12px;
     }
     100%{
-        bottom: -100px;
+        margin-top: -55px;
+       
     }
 }
+
 .audio{
     background: #009959;
     color: #fff;
-    position: absolute;
-    width: calc(100% - 345px);
-    margin: 17px;
-    bottom: 0;
+    max-width: 100%;
+    width: auto;
+    margin:10px 17px;
     border-radius: 3rem;
     padding: 1rem 2rem;
     z-index: 9;
-    right: 0;
     animation: audio-open ease 500ms;
 }
 .audio--closed{
     background: #009959;
     color: #fff;
-    position: absolute;
-    width: calc(100% - 345px);
-    margin: 17px;
-   right: 0;
-    bottom: -100px;
+    max-width: 100%;
+    width: auto;
+    margin: 10px 17px;
+    margin-top: -55px;
     border-radius: 3rem;
     padding: 1rem 2rem;
     z-index: 9;
@@ -61,4 +61,40 @@
 .audio__span{
     font-size: 1.6rem;
     font-weight: 500;
+}
+@media only screen and (max-width:950px){
+    .audio ,.audio--closed{
+        width: calc(100% - 280px);
+      
+    }
+    @keyframes audio-open {
+        0%{
+            bottom: -100px;
+        }
+        100%{
+            bottom: 2rem;
+        }
+    }
+    @keyframes audio-close {
+        0%{
+            bottom: 2rem;
+        }
+        100%{
+            bottom: -100px;
+        }
+    }
+}
+@media only screen and (max-width:650px){
+    .audio , .audio--closed{
+        position: absolute;
+        width: 90%;
+        left: 2%;
+        margin: 0;
+        //width: calc(100% - 65px);
+        bottom: 2rem;
+        z-index: 99;
+    }
+    .audio--closed{
+        bottom: -100px;
+    }
 }

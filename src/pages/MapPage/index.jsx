@@ -11,8 +11,8 @@ const {currentZone}=useCurrentZone()
             <div className="map-page__container container">
                   <div className="map-page__header">
                   <PageControl next="/"/>
-                  <Title text={currentZone.country}/>
-                  <Search/>
+                  <h3 className="map-page__country">{currentZone.country}</h3>
+                  <Search className="map-page__search"/>
                   </div>
                   <div className="map-page__body">
                   <iframe className='map-page__iframe' src={`https://maps.google.com/maps?q=${currentZone.latitude}, ${currentZone.longitude}&output=embed`} ></iframe> 

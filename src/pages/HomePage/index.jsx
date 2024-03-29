@@ -137,7 +137,7 @@ function HomePage() {
                    <div className="home__tablet-head">
                     <button onClick={()=>window.location.reload()} className='home__reload-button'></button>
                      <h2 className='home__state'>{currentZone.city || currentZone.state}</h2>
-                     <Search/>
+                     <Search className="home__search-button"/>
                    </div>
                    <p className="home__tablet-date">{data?.date.gregorianDate}</p>
                    <h2
