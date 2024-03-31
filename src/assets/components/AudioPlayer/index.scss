@@ -62,11 +62,8 @@
     font-size: 1.6rem;
     font-weight: 500;
 }
-@media only screen and (max-width:950px){
-    .audio ,.audio--closed{
-        width: calc(100% - 280px);
-      
-    }
+
+@media only screen and (max-width:650px){
     @keyframes audio-open {
         0%{
             bottom: -100px;
@@ -83,18 +80,24 @@
             bottom: -100px;
         }
     }
-}
-@media only screen and (max-width:650px){
     .audio , .audio--closed{
         position: absolute;
+        max-width: 90%;
         width: 90%;
+        padding: 1rem 0;
         left: 2%;
-        margin: 0;
         //width: calc(100% - 65px);
         bottom: 2rem;
         z-index: 99;
     }
     .audio--closed{
         bottom: -100px;
+        //margin: 0 auto;
+    }
+    .audio__button{
+        margin-left: 3rem;
+    }
+    .audio__close-btn{
+        margin-right: 3rem;
     }
 }

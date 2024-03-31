@@ -10,7 +10,7 @@
 }
 .map-page__iframe{
     width: 100%;
-    height: 100%;
+    height: 110%;
     border-radius: 1rem;
     border: none;
 }
@@ -18,7 +18,7 @@
     font-family: "Poppins";
     font-weight: 500;
     font-size: 2.8rem;
-    padding-left: 3rem;
+    //padding-left: 3rem;
     position: relative;
     &::after{
         position: absolute;
@@ -27,7 +27,7 @@
         content: '';
         background: url(../../assets//img/geo-alt-fill.svg) no-repeat center center;
         background-size: contain;
-        left: 0;
+        left: -3rem;
         top: 15%;
     }
 }

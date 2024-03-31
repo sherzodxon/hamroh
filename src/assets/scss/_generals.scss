@@ -129,6 +129,7 @@ button{
   }
   .app__body{
     margin-top: 1.5rem;
+ 
   }
   .container{
     height: calc(100vh - 105px);
@@ -147,6 +148,9 @@ button{
 }
 .app__body{
   margin-top: 0;
+  flex-grow: 0;
+  max-width: 100%;
+  position: relative;
 }
 .tablet-timings{
   height: 100%;
@@ -156,14 +160,14 @@ button{
 .container{
   margin: 0.5rem;
   padding: 1rem;
-  height: calc(100vh - 10rem);
+  height: calc(100vh - 14rem);
   position: relative;
   
 }
 .overflow-hidden-container{
   overflow: hidden;
   padding: 0;
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 12rem);
 }
 }
 
