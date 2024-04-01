@@ -12,34 +12,19 @@ function AyahList({audios, editionTexts, arabicTexts}) {
 
     return (
         <ul className='oyat-list'>
-            {editionTexts.ayahs
-                ?.map((item, index) =>< AyahCard transText = {
-                    item.text
-                }
-                arabicText = {
-                    arabicTexts[index].text
-                }
-                number = {
-                    item.numberInSurah
-                }
-                key = {
-                    item.numberInSurah
-                }
+            {editionTexts.ayahs?.map((item, index) =>< AyahCard transText = {item.text}
+                arabicText = {arabicTexts[index].text}
+                number = {item.numberInSurah}
+                key = {item.numberInSurah}
                 setPlaylist = {
                     () => {
                         setCurrentPlaylistContext(audios);
                         dispatch(setPlaylist(audios));
                     }
                 }
-                audioUrl = {
-                    audios[item.numberInSurah - 1].audio
-                }
-                ayahName = {
-                    editionTexts.nameUz
-                }
-                surahNumber = {
-                    editionTexts.number
-                } />)
+                audioUrl = {audios[item.numberInSurah - 1].audio}
+                ayahName = {editionTexts.nameUz}
+                surahNumber = {editionTexts.number} />)
 }
         </ul>
     )

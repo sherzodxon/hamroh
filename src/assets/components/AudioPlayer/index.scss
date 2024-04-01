@@ -26,6 +26,7 @@
     border-radius: 3rem;
     padding: 1rem 2rem;
     z-index: 9;
+    margin-bottom: 0;
     animation: audio-open ease 500ms;
 }
 .audio--closed{
@@ -39,6 +40,7 @@
     padding: 1rem 2rem;
     z-index: 9;
     animation: audio-close ease 400ms;
+    margin-bottom: 0;
 }
 .audio__inner{
     display: flex;
@@ -69,12 +71,12 @@
             bottom: -100px;
         }
         100%{
-            bottom: 2rem;
+            bottom: 0rem;
         }
     }
     @keyframes audio-close {
         0%{
-            bottom: 2rem;
+            bottom: 0rem;
         }
         100%{
             bottom: -100px;
@@ -87,7 +89,7 @@
         padding: 1rem 0;
         left: .5%;
         //width: calc(100% - 65px);
-        bottom: 2rem;
+        bottom: 0rem;
         z-index: 99;
     }
     .audio--closed{

@@ -32,7 +32,9 @@ function Calendar() {
         }
        
     }, [currentZone.country,date]);
-
+    useEffect(() => {
+        document.title = `Hamroh | Oylik taqvim`;
+    }, []);
     return (
         <div className="calendar">
             <div className="calendar__container container">

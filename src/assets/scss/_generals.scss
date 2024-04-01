@@ -52,7 +52,7 @@ ol {
 
 .app__main {
   display: flex;
-  margin-top: 8rem;
+  margin-top: 7rem;
 }
 
 .app__body{
@@ -75,7 +75,6 @@ overflow: hidden;
   max-height: 1200px;
   padding: 1.5rem 3rem;
   padding-bottom: 0;
-  margin-top: 1rem;
   width: auto;
   &::-webkit-scrollbar {
     width: 5px;
@@ -162,7 +161,7 @@ button{
   padding: 1rem;
   height: calc(100vh - 16rem);
   position: relative;
-  
+  margin-top: 0;
 }
 .overflow-hidden-container{
   overflow: hidden;

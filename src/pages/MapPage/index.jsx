@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './index.scss'
 import PageControl from '../../assets/components/PageControl'
-import Title from '../../assets/components/Title'
 import { useCurrentZone } from '../../contexts/context'
 import Search from '../../assets/components/Search'
 function Map() {
-const {currentZone}=useCurrentZone()
+const {currentZone}=useCurrentZone();
+useEffect(() => {
+    document.title = `Hamroh | Xarita`;
+}, []);
     return (
         <div className="map-page">
             <div className="map-page__container container">

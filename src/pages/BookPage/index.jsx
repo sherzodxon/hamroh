@@ -43,7 +43,9 @@ function Book() {
         setSearch(true)
         debouncedSearchData()
     }
-
+    useEffect(() => {
+        document.title = `Hamroh | Qur'on`;
+    }, []);
     return (
         <div className="book">
             <div className="book__container container">

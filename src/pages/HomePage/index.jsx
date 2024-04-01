@@ -127,7 +127,9 @@ function HomePage() {
             currentTimeClass(data.timings)
         }
     }, [second]);
-
+    useEffect(() => {
+        document.title = `Hamroh`;
+    }, []);
     if (mobile) {
         return (
             <section className='home'>
@@ -146,7 +148,7 @@ function HomePage() {
                     }}
                         className='home__time'>{checkTime(hour)}:{checkTime(minute)}:{checkTime(second)}</h2>
                     <p className='home__country'>{currentZone.country}</p>
-                    
+                  
                     {!data
                         ? <HomeSpinner/>
                         : <Timings data={data}/>

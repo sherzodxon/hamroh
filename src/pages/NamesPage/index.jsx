@@ -22,7 +22,10 @@ function Names() {
      else{
       setDisabled(false)
      }
-   },[likedNames])
+   },[likedNames]);
+   useEffect(() => {
+    document.title = `Hamroh | Alloh ismlari`;
+   }, []);
         return (
         <div   className="names">
           <div  className="names__container container">

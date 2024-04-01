@@ -7,3 +7,8 @@
     margin: auto;
     margin-top: 100px;
 }
+@media only screen and (max-width:450px){
+.registration__form-wrapper{
+    width: 90%;
+}
+}

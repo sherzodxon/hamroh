@@ -18,7 +18,10 @@ function NamePage() {
         (async () => {
             setData(await getNames(NAMES.one_name(id)))
        })()
-  },[id])
+  },[id]);
+  useEffect(() => {
+    document.title = `Hamroh | ${data?.name?data?.name:" "}`;
+}, [data?.name]);
     return (
 <div className="name">
     <div className="name__container container">

@@ -23,6 +23,7 @@ function SurahPage() {
     const [isLoading,
         setIsLoading] = useState(true);
     const {id} = useParams();
+    
     const getAllData = () => {
         const arabicText = axios.get(`https://api.alquran.cloud/v1/surah/${id}`);
         const arabicAudio = axios.get(`https://api.alquran.cloud/v1/surah/${id}/ar.alafasy`);
@@ -52,10 +53,14 @@ function SurahPage() {
 
             });
     }
+   
     useEffect(() => {
         //dispatch(fetchAyahs(id));
         getAllData()
     }, [id]);
+    useEffect(() => {
+        document.title = `Hamroh | ${editionTexts?.nameUz?editionTexts?.nameUz:" "}`;
+    }, [editionTexts.nameUz]);
     if (error) {
         return <ErrorSection/>;
     }
