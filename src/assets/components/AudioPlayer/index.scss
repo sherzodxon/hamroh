@@ -87,14 +87,13 @@
         max-width: 90%;
         width: 90%;
         padding: 1rem 0;
-        left: .5%;
-        //width: calc(100% - 65px);
+        margin: 0;
+       left: calc(50% - 45%);
         bottom: 0rem;
         z-index: 99;
     }
     .audio--closed{
         bottom: -100px;
-        //margin: 0 auto;
     }
     .audio__button{
         margin-left: 3rem;
