@@ -2,7 +2,7 @@
     --background: lightyellow;
     --navbar-width: 25.6rem;
     --navbar-width-min: 8rem;
-    --navbar-dark-primary: rgb(0, 153, 89);
+    --navbar-dark-primary: #009959;
     --navbar-dark-secondary: #036b40b3;
     --navbar-light-primary: #f5f6fa;
     --navbar-light-secondary: #fff;
@@ -328,6 +328,8 @@ label[for=nav-toggle] {
         margin-top: 1rem;
         box-sizing: border-box;
         border-radius: 1.6rem;
+        z-index: 90;
+        opacity: 1;
     }
     #nav-header{
         display: none;
