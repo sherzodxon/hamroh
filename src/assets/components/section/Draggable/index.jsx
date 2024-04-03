@@ -23,16 +23,22 @@ function Draggable({data}) {
     const resize = useCallback((mouseMoveEvent) => {
         if (isResizing) {
             setMenuHeight(Math.abs(mouseMoveEvent.clientY - menuRef.current.getBoundingClientRect().bottom));
-
+             //console.log(mouseMoveEvent.changedTouches[0].clientY);
+             //console.log();
+             setMenuHeight(Math.abs(mouseMoveEvent.changedTouches[0].clientY-menuRef.current.getBoundingClientRect().top)  )
         }
     }, [isResizing]);
 
     useEffect(() => {
         window.addEventListener("mousemove", resize);
         window.addEventListener("mouseup", stopResizing);
+        window.addEventListener("touchmove",resize);
+        window.addEventListener("touchstart",stopResizing );
         return () => {
             window.removeEventListener("mousemove", resize);
             window.removeEventListener("mouseup", stopResizing);
+            window.addEventListener("touchmove",resize);
+            window.addEventListener("touchstart",stopResizing );
         };
     }, [resize, stopResizing]);
 
@@ -48,9 +54,13 @@ function Draggable({data}) {
     useEffect(() => {
         window.addEventListener("mousemove", resize);
         window.addEventListener("mouseup", stopResizing);
+        window.addEventListener("touchmove",resize);
+        window.addEventListener("touchstart",stopResizing );
         return () => {
             window.removeEventListener("mousemove", resize);
             window.removeEventListener("mouseup", stopResizing);
+            window.addEventListener("touchmove",resize);
+            window.addEventListener("touchstart",stopResizing )
         };
     }, [resize, stopResizing]);
 
@@ -67,7 +77,7 @@ function Draggable({data}) {
     
     
     return (
-        <div onMouseDown={startResizing} ref={menuRef} style={{height: menuHeight}} className={`draggable draggable__${browserClassname}`}>
+        <div onMouseDownCapture={startResizing} onTouchStart={()=>startResizing} ref={menuRef} style={{height: menuHeight}} className={`draggable draggable__${browserClassname}`}>
           <button className="draggable__button" onClick={handleClickMenu}><img src={isOpen?btnUp:btnDown} alt="btn" /></button>
             <ul  className="draggable__list">        
               {data?.timings.map((el) =><DraggableItem key={el.id} name={el.name} time={el.time}/>)
