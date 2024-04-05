@@ -6,6 +6,20 @@ import {
 } from "./useApi";
 import { addMinutesToTime } from "./functions";
 
+async function fetchCurrencyRates() {
+    try {
+      const response = await axios.get('https://cbu.uz/oz/arkhiv-kursov-valyut/json'); // Replace with actual URL
+  
+      if (response.status === 200) {
+        return response.data; // Assuming the response is valid JSON
+      } else {
+        throw new Error('Failed to fetch currency rates');
+      }
+    } catch (error) {
+      console.error('Error fetching currency rates:', error);
+      throw error; // Re-throw for handling in your component
+    }
+  }
 
 const getTimings = async (params) => {
     const values = params.split("?");
@@ -165,5 +179,6 @@ export {
     getSurahs,
     oneSurah,
     getAudio,
-    getCalendar
+    getCalendar,
+  
 }

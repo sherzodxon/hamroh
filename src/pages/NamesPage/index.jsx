@@ -3,7 +3,7 @@ import './index.scss'
 import PageControl from '../../assets/components/PageControl';
 import NamesList from '../../assets/components/section/NamesList';
 import { useQuery } from 'react-query';
-import { getNames } from '../../boot/axios';
+import { fetchCurrencyRates, getNames } from '../../boot/axios';
 import { NAMES } from '../../boot/useApi';
 import HomeSpinner from '../../assets/components/section/Spinner/HomeSpinner';
 import { useEffect } from 'react';
@@ -25,6 +25,15 @@ function Names() {
    },[likedNames]);
    useEffect(() => {
     document.title = `Hamroh | Alloh ismlari`;
+    const fetchData = async () => {
+      try {
+       
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
    }, []);
         return (
         <div   className="names">
