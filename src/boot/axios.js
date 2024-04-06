@@ -8,16 +8,16 @@ import { addMinutesToTime } from "./functions";
 
 async function fetchCurrencyRates() {
     try {
-      const response = await axios.get('https://cbu.uz/oz/arkhiv-kursov-valyut/json'); // Replace with actual URL
+      const response = await axios.get('https://cbu.uz/oz/arkhiv-kursov-valyut/json');  
   
       if (response.status === 200) {
-        return response.data; // Assuming the response is valid JSON
+        return response.data; 
       } else {
         throw new Error('Failed to fetch currency rates');
       }
     } catch (error) {
       console.error('Error fetching currency rates:', error);
-      throw error; // Re-throw for handling in your component
+      throw error;
     }
   }
 
