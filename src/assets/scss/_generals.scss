@@ -122,6 +122,16 @@ button{
     outline: none;
   }
 }
+.ant-select-selection-item{
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.ant-select-selection-item-remove{
+  opacity: 0;
+  display: none !important;
+}
+
 @media only screen and (max-width:950px){
   html{
     font-size: 50%;
@@ -161,14 +171,14 @@ button{
   margin: 0.5rem;
   bottom: 0rem;
   padding: 1rem;
-  height: calc(100vh - 14.5rem);
+  height: calc(100vh - 15.5rem);
   position: relative;
   margin-top: 0;
 }
 .overflow-hidden-container{
   overflow: hidden;
   padding: 0;
-  height: calc(100vh - 12.5rem);
+  height: calc(100vh - 13.5rem);
 }
 }
 

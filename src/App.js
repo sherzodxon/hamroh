@@ -7,7 +7,7 @@ import {Provider} from 'react-redux';
 const queryClient = new QueryClient()
 function App() {
     return (
-        <Provider store={store}>
+        <Provider store={store}> 
             <DataCurrentZone>
                 <QueryClientProvider client={queryClient}>
                     <AppLayout/>

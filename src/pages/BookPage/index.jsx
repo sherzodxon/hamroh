@@ -32,9 +32,9 @@ function Book() {
             const searchText = `${el.nameUz}`;
             return searchText.match(searchRegExp);
 
-        })
+        })  
         setSearchedData(foundData);
-        setSearch(false)
+        setSearch(false);
     }
 
     const debouncedSearchData = debounce(handleSearch, 1000);
