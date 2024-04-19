@@ -21,7 +21,17 @@
     line-height: 48px;
     letter-spacing: -0.04em;
     margin: 0 auto;
- 
+    position: relative;
+    &::after{
+        position: absolute;
+        width: 2.2rem;
+        height: 2.2rem;
+        content: '';
+        left: -3rem;
+        background: url(../../../assets/img/pin-map.svg) no-repeat center center;
+        background-size: contain;
+        top: 12px;
+    }
    
 }
 @media only screen and (max-width:1100px){

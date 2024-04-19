@@ -13,7 +13,10 @@ useEffect(() => {
             <div className="map-page__container container">
                   <div className="map-page__header">
                   <PageControl next="/"/>
-                  <h3 className="map-page__country">{currentZone.country}</h3>
+                 <div className="map-page__title-wrapper">
+                 <h3 className="map-page__country">{currentZone.country}</h3>
+                 <p className='map-page__state'>{currentZone.state}</p>
+                 </div>
                   <Search className="map-page__search"/>
                   </div>
                   <div className="map-page__body">
