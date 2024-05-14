@@ -171,13 +171,14 @@ button{
   margin: 0.5rem;
   bottom: 1rem;
   padding: 1rem;
-  height: 98vh;
+  height: 97vh;
   position: relative;
   margin-top: 0;
 }
 .overflow-hidden-container{
   overflow: hidden;
   padding: 0;
+  height: 99vh;
   //height: calc(100vh - 13rem);
 }
 }
