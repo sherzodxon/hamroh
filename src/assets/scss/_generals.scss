@@ -169,16 +169,16 @@ button{
 .container{
   position: fixed;
   margin: 0.5rem;
-  bottom: 0rem;
+  bottom: 1rem;
   padding: 1rem;
-  height: calc(100vh - 15rem);
+  height: 98vh;
   position: relative;
   margin-top: 0;
 }
 .overflow-hidden-container{
   overflow: hidden;
   padding: 0;
-  height: calc(100vh - 13rem);
+  //height: calc(100vh - 13rem);
 }
 }
 

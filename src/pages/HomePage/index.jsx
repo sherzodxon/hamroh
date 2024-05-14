@@ -32,7 +32,6 @@ function HomePage() {
     const [windowSize,
         setWindowSize] = useState(window.innerWidth);
     const browserClassname = useSelector((state) => state.browserThemes.containerClassName);
-    const tablet = useSelector((state) => state.browserThemes.tablet);
     const mobile = useSelector((state) => state.browserThemes.mobile);
 
     const dispatch = useDispatch()
