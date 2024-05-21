@@ -108,7 +108,8 @@ function HomePage() {
         if (currentZone.timezone) {
 
             (async() => {
-                const dateString = await getCurrentTime(currentZone.timezone)
+                const dateString = await getCurrentTime(currentZone.timezone);
+                console.log(currentZone.timezone);
                 const timePart = dateString
                     .split('T')[1]
                     .split('.')[0]

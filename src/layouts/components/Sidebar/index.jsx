@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { sidebarRoutes } from './sidebarRoutes'
 import { Link, useLocation } from 'react-router-dom'
 import "./index.scss"
-import { useSelector } from 'react-redux';
 
 function Sidebar() {
 const [checked,setchecked]=useState(false);
 let location = useLocation();
-const colors = useSelector((state)=>state.browserThemes.containerClassName)
-console.log(colors);
+
 useEffect(()=>{
 sidebarRoutes.forEach((el)=>{
 if (el.to==location.pathname) {

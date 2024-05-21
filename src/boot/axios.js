@@ -6,20 +6,6 @@ import {
 } from "./useApi";
 import { addMinutesToTime } from "./functions";
 
-async function fetchCurrencyRates() {
-    try {
-      const response = await axios.get('https://cbu.uz/oz/arkhiv-kursov-valyut/json');  
-  
-      if (response.status === 200) {
-        return response.data; 
-      } else {
-        throw new Error('Failed to fetch currency rates');
-      }
-    } catch (error) {
-      console.error('Error fetching currency rates:', error);
-      throw error;
-    }
-  }
 
 const getTimings = async (params) => {
     const values = params.split("?");
@@ -97,7 +83,7 @@ try {
         country: response.data.countryName,
         state: response.data.city,
         city: response.data.locality,
-        timezone: response.data.localityInfo.informative[2]?.name || response.data.localityInfo.informative[1]?.name,
+        timezone: response.data.localityInfo.informative[1]?.name || response.data.localityInfo.informative[2]?.name,
         latitude:latitude,
         longitude:longitude,
     }

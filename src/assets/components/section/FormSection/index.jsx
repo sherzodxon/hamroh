@@ -75,6 +75,7 @@ return (
             setCountry(country.name);
             setLatitude(country.latitude);
             setLongitude(country.longitude);
+            console.log(country.capital);
             setTimezone(`${country.region}/${country.capital}`);
             setStateLoader(true)
             GetState(country.id).then((result) => {

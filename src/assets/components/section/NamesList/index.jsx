@@ -1,5 +1,6 @@
 import React from 'react'
 import NamesCard from '../../NamesCard'
+import './index.scss'
 
 function NamesList({data,refetch}) {
     

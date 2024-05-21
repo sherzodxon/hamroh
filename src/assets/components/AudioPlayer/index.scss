@@ -18,7 +18,7 @@
 }
 
 .audio{
-    background: #009959;
+    background: rgba(3, 107, 64, 0.902);
     color: #fff;
     max-width: 100%;
     width: auto;
@@ -76,7 +76,7 @@
     }
     @keyframes audio-close {
         0%{
-            bottom: 6rem;
+            bottom: 10rem;
         }
         100%{
             bottom: -100px;
@@ -89,7 +89,7 @@
         padding: 1rem 0;
         margin: 0;
        left: calc(50% - 45%);
-        bottom: 6rem;
+        bottom: 10rem;
         z-index: 99;
     }
     .audio--closed{
