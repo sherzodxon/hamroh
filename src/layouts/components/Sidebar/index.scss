@@ -318,7 +318,7 @@ label[for=nav-toggle] {
 }
 @media only screen and (max-width:650px){
     .sidebar{
-        position: absolute;
+        position: fixed;
         width: 96%;
         max-width: 450px;
         left: calc(50% - 225px);
