@@ -71,7 +71,7 @@
             bottom: -100px;
         }
         100%{
-            bottom: 0rem;
+            bottom: 10rem;
         }
     }
     @keyframes audio-close {
@@ -83,7 +83,7 @@
         }
     }
     .audio , .audio--closed{
-        position: absolute;
+        position: fixed;
         max-width: 90%;
         width: 90%;
         padding: 1rem 0;

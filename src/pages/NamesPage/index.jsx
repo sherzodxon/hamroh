@@ -12,7 +12,7 @@ import Title from '../../assets/components/Title';
 function Names() {
   const [select,setSelect]=useState(false);
   const [disabled,setDisabled]=useState(false)
-  const {data,isLoading,refetch}=useQuery('names',()=> getNames(NAMES.names));
+  const {data,isLoading,refetch,error}=useQuery('names',()=> getNames(NAMES.names));
   const likedNames=data?.filter((element)=>element.isLiked=="true");
    useEffect(()=>{
      if (likedNames?.length==0) {
@@ -35,6 +35,7 @@ function Names() {
 
     fetchData();
    }, []);
+  
         return (
         <div   className="names">
           <div  className="names__container container">
