@@ -22,16 +22,7 @@
     position: relative;
     text-align: 
     center;
-    &::after{
-        position: absolute;
-        width:2.5rem;
-        height: 2.5rem;
-        content: '';
-        background: url(../../assets//img/geo-alt-fill.svg) no-repeat center center;
-        background-size: contain;
-        left: -0.5rem;
-        top: 15%;
-    }
+    
 }
 .map-page__state{
     font-family: 'Roboto Serif';
